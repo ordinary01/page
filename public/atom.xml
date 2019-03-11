@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.jiangdashuai.com/"/>
+  <updated>2019-03-10T16:52:05.011Z</updated>
+  <id>https://blog.jiangdashuai.com/</id>
+  
+  <author>
+    <name>蒋大帅</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos中Python2.x 升级3.x</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/11/Centos中Python2-x-升级3-x/</id>
+    <published>2019-03-10T16:12:29.000Z</published>
+    <updated>2019-03-10T16:52:05.011Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;查看当前 python 版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="centos" scheme="https://blog.jiangdashuai.com/categories/centos/"/>
+    
+    
+      <category term="centos" scheme="https://blog.jiangdashuai.com/tags/centos/"/>
+    
+      <category term="python" scheme="https://blog.jiangdashuai.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac环境中在 Pycharm 中部署 Anaconda</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/Mac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/</id>
+    <published>2019-03-10T15:57:45.000Z</published>
+    <updated>2019-03-10T16:52:41.005Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.Pycharm-&amp;gt;Preferences&lt;img src=&quot;/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/进入属性.png&quot; alt=&quot;进入属性&quot;&gt;&lt;br&gt;2.Project:项目名-&amp;gt;Project
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="https://blog.jiangdashuai.com/categories/python/"/>
+    
+    
+      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
+    
+      <category term="Pycharm" scheme="https://blog.jiangdashuai.com/tags/Pycharm/"/>
+    
+      <category term="Anaconda" scheme="https://blog.jiangdashuai.com/tags/Anaconda/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyCharm不能编辑</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/PyCharm不能编辑/</id>
+    <published>2019-03-10T15:55:33.000Z</published>
+    <updated>2019-03-10T16:52:52.398Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;是因为安装的时候安装了vim扩展，会默认使用vim编辑器来进行编辑，需要手动关闭Vim Emulator&lt;br&gt;&lt;code&gt;Tools -&amp;gt; Vim Emulator&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/img/img.png&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="python" scheme="https://blog.jiangdashuai.com/categories/python/"/>
+    
+    
+      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
+    
+      <category term="PyCharm" scheme="https://blog.jiangdashuai.com/tags/PyCharm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 中添加 Docker 的国内镜像</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/Mac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/Mac-中添加-Docker-的国内镜像/</id>
+    <published>2019-03-10T15:52:10.000Z</published>
+    <updated>2019-03-10T16:52:26.012Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;点击 Docker 设置&lt;br&gt;&lt;img src=&quot;/2019/03/10/Mac-中添加-Docker-的国内镜像/img/Docker.png&quot; alt=&quot;Docker&quot;&gt;&lt;/li&gt;
+&lt;li&gt;Preferences-&amp;gt;Daemon&lt;br&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
+    
+      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>springboot 连接数据库报错（useSSl）</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/springboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/springboot-连接数据库/</id>
+    <published>2019-03-10T15:50:16.000Z</published>
+    <updated>2019-03-10T16:53:43.170Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="https://blog.jiangdashuai.com/categories/spring-boot/"/>
+    
+    
+      <category term="springboot data" scheme="https://blog.jiangdashuai.com/tags/springboot-data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring 中获取时间相差八个小时解决</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/Spring-%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9B%B8%E5%B7%AE%E5%85%AB%E4%B8%AA%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/Spring-中获取时间相差八个小时解决/</id>
+    <published>2019-03-10T15:43:31.000Z</published>
+    <updated>2019-03-10T16:53:19.152Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;a href=&quot;#获取时间与真实时间相差八小时问题&quot; class=&quot;headerlink&quot; title=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;/a&gt;获取时间与真实时间相差八小时问题&lt;/h1&gt;&lt;h2 id=&quot;问题1：&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="https://blog.jiangdashuai.com/categories/spring-boot/"/>
+    
+    
+      <category term="springboot" scheme="https://blog.jiangdashuai.com/tags/springboot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>spring-boot-jpa使用IDEA生成实体类</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa使用IDEA生成实体类/</id>
+    <published>2019-03-10T15:35:37.000Z</published>
+    <updated>2019-03-10T16:53:10.599Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ol&gt;
+&lt;li&gt;View-&amp;gt;Tool Windows-&amp;gt;DataBase添加数据库&lt;/li&gt;
+&lt;li&gt;File-&amp;gt;Project Structure如果没有点击加号加上model &lt;img
+        
+      
+    
+    </summary>
+    
+      <category term="spring-boot" scheme="https://blog.jiangdashuai.com/categories/spring-boot/"/>
+    
+    
+      <category term="IDEA" scheme="https://blog.jiangdashuai.com/tags/IDEA/"/>
+    
+      <category term="spring-boot-jpa" scheme="https://blog.jiangdashuai.com/tags/spring-boot-jpa/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Docker设置内部时间为东八区</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/Docker%E8%AE%BE%E7%BD%AE%E5%86%85%E9%83%A8%E6%97%B6%E9%97%B4%E4%B8%BA%E4%B8%9C%E5%85%AB%E5%8C%BA/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/Docker设置内部时间为东八区/</id>
+    <published>2019-03-10T15:24:27.000Z</published>
+    <updated>2019-03-10T16:52:15.188Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;在 Dockerfile 或者 Docker Compose 中加入&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>最小化 Centos7 安装没有 ifconfig命令，以及更新 yum</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/</id>
+    <published>2019-03-10T15:02:48.000Z</published>
+    <updated>2019-03-10T16:53:56.460Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;安装 net 工具&lt;/p&gt;
+&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+      <category term="centos" scheme="https://blog.jiangdashuai.com/categories/centos/"/>
+    
+    
+      <category term="centos" scheme="https://blog.jiangdashuai.com/tags/centos/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>1.类加载过程简单介绍</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/类加载过程简单介绍/</id>
+    <published>2019-03-10T14:21:09.000Z</published>
+    <updated>2019-03-10T16:54:03.228Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;类加载的过程&quot;&gt;&lt;a href=&quot;#类加载的过程&quot; class=&quot;headerlink&quot; title=&quot;类加载的过程&quot;&gt;&lt;/a&gt;类加载的过程&lt;/h1&gt;&lt;pre&gt;&lt;code&gt;1. **加载**： 查找并加载类的二进制文件
+2. **连接**：
+    * 验证
+ 
+        
+      
+    
+    </summary>
+    
+      <category term="未完成" scheme="https://blog.jiangdashuai.com/categories/%E6%9C%AA%E5%AE%8C%E6%88%90/"/>
+    
+    
+      <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/10/hello-world/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/10/hello-world/</id>
+    <published>2019-03-10T12:52:21.773Z</published>
+    <updated>2019-03-10T12:52:21.773Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
