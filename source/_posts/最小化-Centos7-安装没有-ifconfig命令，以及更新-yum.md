@@ -2,10 +2,11 @@
 title: 最小化 Centos7 安装没有 ifconfig命令，以及更新 yum
 date: 2019-03-10 23:02:48
 tags:
-    - centos
+  - centos
 categories:
-    - centos
+  - 环境问题
 ---
+
 安装 net 工具
 
 ```bash
@@ -13,7 +14,7 @@ yum install net-tools
 ```
 
 安装过程中可能会报 yum 异常，可以更改 yum 源
-可以参考163的源网站 <http://mirrors.163.com/.help/centos.html>
+可以参考 163 的源网站 <http://mirrors.163.com/.help/centos.html>
 
 1.备份
 

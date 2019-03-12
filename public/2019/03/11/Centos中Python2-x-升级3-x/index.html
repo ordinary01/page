@@ -201,7 +201,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/centos/" itemprop="url" rel="index"><span itemprop="name">centos</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -213,7 +213,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">python --version<br>python -V<br></code></pre></td></tr></table></figure>
 <ul>
-<li>下载最新的python版本</li>
+<li>下载最新的 python 版本</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz<br></code></pre></td></tr></table></figure>
 <ul>
@@ -229,7 +229,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">configure: error: no acceptable C compiler found <span class="hljs-keyword">in</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
 <ul>
-<li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum更新</a> )</li>
+<li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum 更新</a> )</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install make gcc gcc-c++<br></code></pre></td></tr></table></figure>
 <ul>
@@ -245,7 +245,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make  install<br></code></pre></td></tr></table></figure>
 <ul>
-<li>这个时候查看 python 版本的还是2.x 访问 python3 的版本是3.x; 查看 python 的链接情况</li>
+<li>这个时候查看 python 版本的还是 2.x 访问 python3 的版本是 3.x; 查看 python 的链接情况</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"> ls -al /usr/bin | grep python<br>-rwxr-xr-x.  1 root root      11216 12月  1 2015 abrt-action-analyze-python<br>lrwxrwxrwx.  1 root root          7 8月  30 12:11 python -&gt; python2<br>lrwxrwxrwx.  1 root root          9 8月  30 12:11 python2 -&gt; python2.7<br>-rwxr-xr-x.  1 root root       7136 11月 20 2015 python2.7<br></code></pre></td></tr></table></figure>
 <ul>
@@ -258,12 +258,12 @@
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ln -s /usr/<span class="hljs-built_in">local</span>/bin/python3 /usr/bin/python<br></code></pre></td></tr></table></figure>
 <p>变为<br><img src="/2019/03/11/Centos中Python2-x-升级3-x/img/f6a97143f25a4971157854be5a0e310.png" alt="f6a97143f25a4971157854be5a0e310.png"></p>
 <ul>
-<li>查看 python 发现已经是3.x的版本</li>
+<li>查看 python 发现已经是 3.x 的版本</li>
 </ul>
 <p>最后会发现 yum 不能使用，由于 yum 引用了 python 需要将 yum 的配置更改</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vi /usr/bin/yum<br>vi /usr/libexec/urlgrabber-ext-down<br></code></pre></td></tr></table></figure>
 <p>将 <em>#!/usr/bin/python 改为 #!/usr/bin/python2.7</em> 就好了</p>
-<p>本文参考：<br> <a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>
+<p>本文参考：<br><a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>
 
     </main>
     <footer class="post-footer">
@@ -296,12 +296,10 @@
   <nav class="page-nav">
     <div class="page-nav-next page-nav-item">
       
-      <a href="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/" rel="next" title="Mac环境中在 Pycharm 中部署 Anaconda"><i class="fas fa-angle-left"></i><span class="nav-title">Mac环境中在 Pycharm 中部署 Anaconda</span></a>
+      <a href="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/" rel="next" title="Mac环境中在 PyCharm 中部署 Anaconda"><i class="fas fa-angle-left"></i><span class="nav-title">Mac环境中在 PyCharm 中部署 Anaconda</span></a>
       
     </div>
     <div class="page-nav-prev page-nav-item">
-      
-      <a href="/2019/03/12/hello-world/" rel="prev" title="Hello World"><span class="nav-title">Hello World</span><i class="fas fa-angle-right"></i></a>
       
     </div>
   </nav>
@@ -336,21 +334,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">11</a></div>
+      <div><a href="/archives/">10</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">5</a></div>
+      <div><a href="/categories/">4</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">12</a></div>
+      <div><a href="/tags/">10</a></div>
     </div>
     
     
