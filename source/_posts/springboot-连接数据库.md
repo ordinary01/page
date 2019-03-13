@@ -2,9 +2,9 @@
 title: springboot 连接数据库报错（useSSl）
 date: 2019-03-10 23:50:16
 tags:
-    - springboot data
+  - spring-boot-data
 categories:
-    - spring-boot
+  - spring-boot问题
 ---
 
 ```bash

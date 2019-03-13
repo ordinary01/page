@@ -201,7 +201,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/centos/" itemprop="url" rel="index"><span itemprop="name">centos</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -210,13 +210,14 @@
     <main class="post-main" itemprop="articleBody">
       <p>安装 net 工具</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install net-tools<br></code></pre></td></tr></table></figure>
-<p>安装过程中可能会报 yum 异常，可以更改 yum 源<br>可以参考163的源网站 <a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></p>
+<p>安装过程中可能会报 yum 异常，可以更改 yum 源<br>可以参考 163 的源网站 <a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></p>
 <p>1.备份</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup<br></code></pre></td></tr></table></figure>
 <p>2.下载相应镜像到指定目录中</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/yum.repos.d/<br>wget http://mirrors.163.com/.<span class="hljs-built_in">help</span>/CentOS7-Base-163.repo<br></code></pre></td></tr></table></figure>
 <p>3.生成缓存</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum clean all<br>yum makecache<br></code></pre></td></tr></table></figure>
+
     </main>
     <footer class="post-footer">
       
@@ -286,21 +287,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">11</a></div>
+      <div><a href="/archives/">10</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">5</a></div>
+      <div><a href="/categories/">4</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">12</a></div>
+      <div><a href="/tags/">10</a></div>
     </div>
     
     

@@ -204,7 +204,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/centos/" itemprop="url" rel="index"><span itemprop="name">centos</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -217,7 +217,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">python --version<br>python -V<br></code></pre></td></tr></table></figure>
 <ul>
-<li>下载最新的python版本</li>
+<li>下载最新的 python 版本</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz<br></code></pre></td></tr></table></figure>
 <ul>
@@ -233,7 +233,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">configure: error: no acceptable C compiler found <span class="hljs-keyword">in</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
 <ul>
-<li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum更新</a> )</li>
+<li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum 更新</a> )</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install make gcc gcc-c++<br></code></pre></td></tr></table></figure>
 <ul>
@@ -249,7 +249,7 @@
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make  install<br></code></pre></td></tr></table></figure>
 <ul>
-<li>这个时候查看 python 版本的还是2.x 访问 python3 的版本是3.x; 查看 python 的链接情况</li>
+<li>这个时候查看 python 版本的还是 2.x 访问 python3 的版本是 3.x; 查看 python 的链接情况</li>
 </ul>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"> ls -al /usr/bin | grep python<br>-rwxr-xr-x.  1 root root      11216 12月  1 2015 abrt-action-analyze-python<br>lrwxrwxrwx.  1 root root          7 8月  30 12:11 python -&gt; python2<br>lrwxrwxrwx.  1 root root          9 8月  30 12:11 python2 -&gt; python2.7<br>-rwxr-xr-x.  1 root root       7136 11月 20 2015 python2.7<br></code></pre></td></tr></table></figure>
 <ul>
@@ -262,12 +262,12 @@
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ln -s /usr/<span class="hljs-built_in">local</span>/bin/python3 /usr/bin/python<br></code></pre></td></tr></table></figure>
 <p>变为<br><img src="/2019/03/11/Centos中Python2-x-升级3-x/img/f6a97143f25a4971157854be5a0e310.png" alt="f6a97143f25a4971157854be5a0e310.png"></p>
 <ul>
-<li>查看 python 发现已经是3.x的版本</li>
+<li>查看 python 发现已经是 3.x 的版本</li>
 </ul>
 <p>最后会发现 yum 不能使用，由于 yum 引用了 python 需要将 yum 的配置更改</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vi /usr/bin/yum<br>vi /usr/libexec/urlgrabber-ext-down<br></code></pre></td></tr></table></figure>
 <p>将 <em>#!/usr/bin/python 改为 #!/usr/bin/python2.7</em> 就好了</p>
-<p>本文参考：<br> <a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>
+<p>本文参考：<br><a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>
 
       
     </main>
@@ -298,7 +298,7 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/" itemprop="url">Mac环境中在 Pycharm 中部署 Anaconda</a>
+        <a class="post-title-link post-title-link-external" href="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/" itemprop="url">Mac环境中在 PyCharm 中部署 Anaconda</a>
       </h1>
       <div class="post-meta">
         
@@ -312,7 +312,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -320,7 +320,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       
-      <p>1.Pycharm-&gt;Preferences<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/进入属性.png" alt="进入属性"><br>2.Project:项目名-&gt;Project Interpreter-&gt;点击右上角的齿轮<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/Project Interpreter.png" alt="Project Interpreter"><br>3.点击齿轮-&gt;Add<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/添加环境.png" alt="添加环境"><br>4.选择System Interpreter-&gt;选择…<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/System Interpreter.png" alt="选择System Interpreter"><br>5.选择 Anaconda路径中的 python 确定<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/选择python环境.png" alt="选择python环境"></p>
+      <p>1.Pycharm-&gt;Preferences<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/进入属性.png" alt="进入属性"><br>2.Project:项目名-&gt;Project Interpreter-&gt;点击右上角的齿轮<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/Project Interpreter.png" alt="Project Interpreter"> 3.点击齿轮-&gt;Add<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/添加环境.png" alt="添加环境"> 4.选择 System Interpreter-&gt;选择…<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/System Interpreter.png" alt="选择System Interpreter"> 5.选择 Anaconda 路径中的 python 确定<img src="/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/选择python环境.png" alt="选择python环境"></p>
 
       
     </main>
@@ -330,7 +330,7 @@
         
         <a class="post-tag button" href="/tags/MAC/" rel="tag"><i class="fas fa-tags"></i>MAC</a>
         
-        <a class="post-tag button" href="/tags/Pycharm/" rel="tag"><i class="fas fa-tags"></i>Pycharm</a>
+        <a class="post-tag button" href="/tags/PyCharm/" rel="tag"><i class="fas fa-tags"></i>PyCharm</a>
         
         <a class="post-tag button" href="/tags/Anaconda/" rel="tag"><i class="fas fa-tags"></i>Anaconda</a>
         
@@ -367,7 +367,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -375,7 +375,7 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       
-      <p>是因为安装的时候安装了vim扩展，会默认使用vim编辑器来进行编辑，需要手动关闭Vim Emulator<br><code>Tools -&gt; Vim Emulator</code><br><img src="/img/img.png" alt="修改图片"></p>
+      <p>是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator<br><code>Tools -&gt; Vim Emulator</code><br><img src="/img/img.png" alt="修改图片"></p>
 
       
     </main>
@@ -477,7 +477,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot/" itemprop="url" rel="index"><span itemprop="name">spring-boot</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot问题/" itemprop="url" rel="index"><span itemprop="name">spring-boot问题</span></a></span>
         </span>
         
         
@@ -495,7 +495,7 @@
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/springboot-data/" rel="tag"><i class="fas fa-tags"></i>springboot data</a>
+        <a class="post-tag button" href="/tags/spring-boot-data/" rel="tag"><i class="fas fa-tags"></i>spring-boot-data</a>
         
       </div>
       
@@ -530,7 +530,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot/" itemprop="url" rel="index"><span itemprop="name">spring-boot</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot问题/" itemprop="url" rel="index"><span itemprop="name">spring-boot问题</span></a></span>
         </span>
         
         
@@ -538,15 +538,15 @@
     </header>
     <main class="post-main" itemprop="articleBody">
       
-      <h1 id="获取时间与真实时间相差八小时问题"><a href="#获取时间与真实时间相差八小时问题" class="headerlink" title="获取时间与真实时间相差八小时问题"></a>获取时间与真实时间相差八小时问题</h1><h2 id="问题1："><a href="#问题1：" class="headerlink" title="问题1："></a>问题1：</h2><p>spring时间<strong>格式化转换</strong>之后与当前时间相差八个小时</p>
-<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>spring 默认使用 jackson转换日期， jackson默认时区与北京时间相差八个小时</p>
+      <h1 id="获取时间与真实时间相差八小时问题"><a href="#获取时间与真实时间相差八小时问题" class="headerlink" title="获取时间与真实时间相差八小时问题"></a>获取时间与真实时间相差八小时问题</h1><h2 id="问题-1："><a href="#问题-1：" class="headerlink" title="问题 1："></a>问题 1：</h2><p>spring 时间<strong>格式化转换</strong>之后与当前时间相差八个小时</p>
+<h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>spring 默认使用 jackson 转换日期， jackson 默认时区与北京时间相差八个小时</p>
 <h3 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h3><p>在项目的配置文件 <em>application.properties</em> 加上下面配置</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">spring.jackson.time-zone=GMT+8<br></code></pre></td></tr></table></figure>
 <p>==============================================</p>
-<h2 id="问题2："><a href="#问题2：" class="headerlink" title="问题2："></a>问题2：</h2><p>数据库获取时间与当前时间相差八个小时（使用的持久层框架为 spring-boot-jpa ）</p>
-<h3 id="原因2："><a href="#原因2：" class="headerlink" title="原因2："></a>原因2：</h3><p>数据库获取的时间与北京时区存在差异</p>
-<h3 id="解决方式2"><a href="#解决方式2" class="headerlink" title="解决方式2"></a>解决方式2</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">spring.datasource.url=jdbc:mysql://IP:3306/database?useUnicode=<span class="hljs-literal">true</span>&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2b8<br></code></pre></td></tr></table></figure>
-<p><em>注：<br> 建议将两种方式都应用到项目中，以防万一</em></p>
+<h2 id="问题-2："><a href="#问题-2：" class="headerlink" title="问题 2："></a>问题 2：</h2><p>数据库获取时间与当前时间相差八个小时（使用的持久层框架为 spring-boot-jpa ）</p>
+<h3 id="原因-2："><a href="#原因-2：" class="headerlink" title="原因 2："></a>原因 2：</h3><p>数据库获取的时间与北京时区存在差异</p>
+<h3 id="解决方式-2"><a href="#解决方式-2" class="headerlink" title="解决方式 2"></a>解决方式 2</h3><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">spring.datasource.url=jdbc:mysql://IP:3306/database?useUnicode=<span class="hljs-literal">true</span>&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2b8<br></code></pre></td></tr></table></figure>
+<p><em>注：<br>建议将两种方式都应用到项目中，以防万一</em></p>
 
       
     </main>
@@ -554,7 +554,7 @@
       
       <div class="post-tags">
         
-        <a class="post-tag button" href="/tags/springboot/" rel="tag"><i class="fas fa-tags"></i>springboot</a>
+        <a class="post-tag button" href="/tags/spring-boot/" rel="tag"><i class="fas fa-tags"></i>spring-boot</a>
         
       </div>
       
@@ -589,7 +589,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot/" itemprop="url" rel="index"><span itemprop="name">spring-boot</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring-boot问题/" itemprop="url" rel="index"><span itemprop="name">spring-boot问题</span></a></span>
         </span>
         
         
@@ -598,11 +598,11 @@
     <main class="post-main" itemprop="articleBody">
       
       <ol>
-<li>View-&gt;Tool Windows-&gt;DataBase添加数据库</li>
-<li>File-&gt;Project Structure如果没有点击加号加上model <img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/Project Structure图片.png" alt="Project Structure图片"></li>
-<li>添加完成后就会出现Persistence窗口(只有执行第二步之后才会出现)<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/Persistence位置.png" alt="Persistence位置.png"></li>
-<li>在 Persistence窗口 右键选择-&gt;Generate Persistence Mapping-&gt;选择By Database Schemas<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/Database Schemas.png" alt="Database Schemas"></li>
-<li>选择第4步的 By Database Schema之后就会出现下面的样式选择相应的数据库表、设置表中字段与实体类的对应关系类型、以及生成的实体类所在包的位置，点击确定后就会在相应的位置生成文件<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/选择数据文件.png" alt="选择数据文件"></li>
+<li>View-&gt;Tool Windows-&gt;DataBase 添加数据库</li>
+<li>File-&gt;Project Structure 如果没有点击加号加上 model <img src="img/Project Structure 图片.png" alt="Project Structure图片"></li>
+<li>添加完成后就会出现 Persistence 窗口(只有执行第二步之后才会出现)<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/Persistence位置.png" alt="Persistence位置.png"></li>
+<li>在 Persistence 窗口 右键选择-&gt;Generate Persistence Mapping-&gt;选择 By Database Schemas<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/Database Schemas.png" alt="Database Schemas"></li>
+<li>选择第 4 步的 By Database Schema 之后就会出现下面的样式选择相应的数据库表、设置表中字段与实体类的对应关系类型、以及生成的实体类所在包的位置，点击确定后就会在相应的位置生成文件<img src="/2019/03/10/spring-boot-jpa使用IDEA生成实体类/img/选择数据文件.png" alt="选择数据文件"></li>
 </ol>
 
       
@@ -612,8 +612,6 @@
       <div class="post-tags">
         
         <a class="post-tag button" href="/tags/IDEA/" rel="tag"><i class="fas fa-tags"></i>IDEA</a>
-        
-        <a class="post-tag button" href="/tags/spring-boot-jpa/" rel="tag"><i class="fas fa-tags"></i>spring-boot-jpa</a>
         
       </div>
       
@@ -700,7 +698,7 @@
         
         <span class="post-categories">
           
-          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/centos/" itemprop="url" rel="index"><span itemprop="name">centos</span></a></span>
+          <i class="far fa-folder-open"></i><span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/环境问题/" itemprop="url" rel="index"><span itemprop="name">环境问题</span></a></span>
         </span>
         
         
@@ -710,13 +708,14 @@
       
       <p>安装 net 工具</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install net-tools<br></code></pre></td></tr></table></figure>
-<p>安装过程中可能会报 yum 异常，可以更改 yum 源<br>可以参考163的源网站 <a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></p>
+<p>安装过程中可能会报 yum 异常，可以更改 yum 源<br>可以参考 163 的源网站 <a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></p>
 <p>1.备份</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup<br></code></pre></td></tr></table></figure>
 <p>2.下载相应镜像到指定目录中</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> /etc/yum.repos.d/<br>wget http://mirrors.163.com/.<span class="hljs-built_in">help</span>/CentOS7-Base-163.repo<br></code></pre></td></tr></table></figure>
 <p>3.生成缓存</p>
 <figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum clean all<br>yum makecache<br></code></pre></td></tr></table></figure>
+
       
     </main>
     <footer class="post-footer">
@@ -789,10 +788,6 @@
   </article>
   
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-  
   
 </div>
 
@@ -823,21 +818,21 @@
     
     <div class="archives-count count-block">
       <div class="site-count-title">归档</div>
-      <div><a href="/archives/">11</a></div>
+      <div><a href="/archives/">10</a></div>
     </div>
     
     
     
     <div class="categories-count count-block">
       <div class="site-count-title">分类</div>
-      <div><a href="/categories/">5</a></div>
+      <div><a href="/categories/">4</a></div>
     </div>
     
     
     
     <div class="tags-count count-block">
       <div class="site-count-title">标签</div>
-      <div><a href="/tags/">12</a></div>
+      <div><a href="/tags/">10</a></div>
     </div>
     
     
