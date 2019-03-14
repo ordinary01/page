@@ -243,12 +243,12 @@
       <link href="/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
       <url>/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</url>
       
-        <content type="html"><![CDATA[<h1 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h1><pre><code>1. **加载**： 查找并加载类的二进制文件2. **连接**：    * 验证    * 准备    * 解析3.**初始化**4.使用5.卸载</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="类加载器解析以及阶段分解"><a href="#类加载器解析以及阶段分解" class="headerlink" title="类加载器解析以及阶段分解"></a>类加载器解析以及阶段分解</h1><p>java_<strong>类型</strong>_（不涉及对象）加载、连接和初始化都是在<strong>程序运行期间</strong>完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理）</p><p>用来加载类的工具就是类加载器</p><h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h2><pre><code>1. **加载**： 查找并加载类的二进制文件2. **连接**：    * 验证：确保类加载的正确性    * 准备：静态变量分配内存，初始默认值    * 解析：符号引用解析为直接引用3. **初始化**：类的静态变量赋予正确初始值4. 使用：调用类得相应的方法，开发者最常参与的过程5. 类的卸载：内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型   已经不存在了，想要使用需要重新加载。例如：osgi）</code></pre><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>  public static int a=1;<br><br>1. 静态变量a分配内存，初始化默认值为_**0**_<br>2. 在初始化过程中，为a赋值为1<br></code></pre></td></tr></table></figure><h3 id="符号（间接）引用解析直接引用"><a href="#符号（间接）引用解析直接引用" class="headerlink" title="符号（间接）引用解析直接引用"></a>符号（间接）引用解析直接引用</h3><p><strong>符号引用</strong>就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。<br><strong>直接引用</strong>就是偏移量，通过偏移量虚拟机可以直接在该类的内存区域中找到方法自己码的起始位置<br><strong>符号引用解析为直接引用</strong>：当第一次运行时，要根据字符串的内容，到该类的方法表中搜索这个方法。运行一次之后，符号引用会被替换为直接引用，下次就不用搜索了，直接使用方法区中的直接引用，这就是类加载过程中的链接中的解析。</p><p><strong>注： </strong><br>   类加载过程，总体是按照顺序，但并不是严格按照顺序进行的。比如：在加载过程中可能会执行初始化中的某些处理。</p><h2 id="JVM结束生命周期的方法"><a href="#JVM结束生命周期的方法" class="headerlink" title="JVM结束生命周期的方法"></a>JVM结束生命周期的方法</h2><ul><li><p>System.exit();</p></li><li><p>程序正常结束</p></li><li><p>遇到异常或者错误，异常终止</p></li><li><p>操作系统错误而导致（开发者不可控的因素）</p></li></ul>]]></content>
       
       
       <categories>
           
-          <category> 未完成 </category>
+          <category> JVM学习 </category>
           
       </categories>
       
