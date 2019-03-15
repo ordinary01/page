@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>sping报错/tmp/tomcat.4296537502689403143.5000/work/Tomcat/localhost/ROOT</title>
+      <link href="/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/"/>
+      <url>/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/</url>
+      
+        <content type="html"><![CDATA[<p>参考<a href="https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat" target="_blank" rel="noopener">https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> （未完成）spring-boot问题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> sping-boot </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Centos中Python2.x 升级3.x</title>
       <link href="/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/"/>
       <url>/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/</url>
