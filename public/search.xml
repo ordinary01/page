@@ -4,6 +4,131 @@
   
     
     <entry>
+      <title>JAVA程序对类的使用方式</title>
+      <link href="/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
+      <url>/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/</url>
+      
+        <content type="html"><![CDATA[<p>java程序对<strong>类</strong>（<code>非对象</code>）的使用方式分为两种：</p><ul><li>主动使用（类的首次主动使用会导致类的初始化）</li></ul><ol><li>创建类的实例</li><li>访问某个类或者接口的静态变量，或者对该静态变量赋值</li><li>调用类的静态方法</li><li>反射 Class.forName(“com.test.Test”);</li><li>初始化一个类的子类</li><li>JVM启动时被表名为启动类的类</li><li>JDK1.7提供的动态语言支持：<br> java.lang.invoke.MethodHandle实例的解析结果REF_getStatic,REF_putStatic,REF_invokeStatic句柄对应的类没有初始化则初始化</li></ol><ul><li>被动使用</li></ul><p>所有非主动使用的使用方式都是对类的被动使用，都不会导致类的初始化</p><p><code>助记符：</code><br>getstatic : 获取静态变量<br>putstatic : 静态变量赋值<br>invokestatic : 调用静态方法</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JVM学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>JVM类的加载</title>
+      <link href="/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/"/>
+      <url>/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/</url>
+      
+        <content type="html"><![CDATA[<p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在<strong>运行时数据区的方法区</strong>内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构。<br>类不管生成多少个实例，它对应的Class对象只有唯一的一个，这里的Class对象就是唯一的那一个。</p><p>加载.class文件的方式</p><ol><li>从本地系统中直接加载</li><li>通过网络下载.class文件</li><li>从zip,jar等归档文件中加载.class文件</li><li>从专有数据库中提取.class文件</li><li>将java源文件动态编译为.class 文件（例如：jsp）</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> JVM学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>类初始化介绍</title>
+      <link href="/2019/03/18/%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D/"/>
+      <url>/2019/03/18/%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D/</url>
+      
+        <content type="html"><![CDATA[<p>所有的Java虚拟机实现必须在每个类或接口被Java程序 “<a href="/2019/03/18/JAVA程序对类的使用方式/"><strong><code>首次主动使用</code></strong></a>” 时才初始化他们<br>被动使用都不会导致类的初始化</p><figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyParent1</span></span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String str=<span class="hljs-string">"Hello"</span>;<br>    <span class="hljs-keyword">static</span> &#123;<br>        System.out.println(<span class="hljs-string">"parent"</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyChild</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">MyParent1</span></span>&#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> String str2=<span class="hljs-string">"welcome"</span>;<br>    <span class="hljs-keyword">static</span> &#123;<br>        System.out.println(<span class="hljs-string">"child"</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>调用1</p><figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**<br> * 对于静态字段来说，只有定义了该字段的类才会被初始化<br> * <span class="hljs-doctag">@param</span> args<br> */</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>    System.out.println(MyParent1.str);<br>&#125;<br>结果为：<br>parent<br>Hello<br></code></pre></td></tr></table></figure><p>调用2</p><figure class="hljs highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/**<br> * 当一个类在初始化时，要求其父类全部都已经初始化完毕<br> * <span class="hljs-doctag">@param</span> args<br> */</span><br><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>    System.out.println(MyChild.str2);<br>&#125;<br>结果为：<br>parent<br>child<br>welcome<br></code></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> JVM学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>jvm符号引用VS间接引用</title>
+      <link href="/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/"/>
+      <url>/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/</url>
+      
+        <content type="html"><![CDATA[<p>符号（间接）引用解析直接引用</p><p><strong>符号引用</strong>就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。<br><strong>直接引用</strong>就是偏移量，通过偏移量虚拟机可以直接在该类的内存区域中找到方法自己码的起始位置<br><strong>符号引用解析为直接引用</strong>：当第一次运行时，要根据字符串的内容，到该类的方法表中搜索这个方法。运行一次之后，符号引用会被替换为直接引用，下次就不用搜索了，直接使用方法区中的直接引用，这就是类加载过程中的链接中的解析。<br>具体可参考 <a href="https://www.zhihu.com/question/30300585/answer/51335493" target="_blank" rel="noopener">https://www.zhihu.com/question/30300585/answer/51335493</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> JVM学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>mmartinfowler microservices</title>
+      <link href="/2019/03/18/mmartinfowler-microservices/"/>
+      <url>/2019/03/18/mmartinfowler-microservices/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://martinfowler.com/microservices/" target="_blank" rel="noopener">https://martinfowler.com/microservices/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 每日一译 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 微服务 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sping报错/tmp/tomcat.4296537502689403143.5000/work/Tomcat/localhost/ROOT</title>
       <link href="/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/"/>
       <url>/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/</url>
@@ -268,7 +393,7 @@
       <link href="/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
       <url>/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</url>
       
-        <content type="html"><![CDATA[<h1 id="类加载器解析以及阶段分解"><a href="#类加载器解析以及阶段分解" class="headerlink" title="类加载器解析以及阶段分解"></a>类加载器解析以及阶段分解</h1><p>java_<strong>类型</strong>_（不涉及对象）加载、连接和初始化都是在<strong>程序运行期间</strong>完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理）</p><p>用来加载类的工具就是类加载器</p><h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h2><pre><code>1. **加载**： 查找并加载类的二进制文件2. **连接**：    * 验证：确保类加载的正确性    * 准备：静态变量分配内存，初始默认值    * 解析：符号引用解析为直接引用3. **初始化**：类的静态变量赋予正确初始值4. 使用：调用类得相应的方法，开发者最常参与的过程5. 类的卸载：内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型   已经不存在了，想要使用需要重新加载。例如：osgi）</code></pre><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>  public static int a=1;<br><br>1. 静态变量a分配内存，初始化默认值为_**0**_<br>2. 在初始化过程中，为a赋值为1<br></code></pre></td></tr></table></figure><h3 id="符号（间接）引用解析直接引用"><a href="#符号（间接）引用解析直接引用" class="headerlink" title="符号（间接）引用解析直接引用"></a>符号（间接）引用解析直接引用</h3><p><strong>符号引用</strong>就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。<br><strong>直接引用</strong>就是偏移量，通过偏移量虚拟机可以直接在该类的内存区域中找到方法自己码的起始位置<br><strong>符号引用解析为直接引用</strong>：当第一次运行时，要根据字符串的内容，到该类的方法表中搜索这个方法。运行一次之后，符号引用会被替换为直接引用，下次就不用搜索了，直接使用方法区中的直接引用，这就是类加载过程中的链接中的解析。<br>具体可参考 <a href="https://www.zhihu.com/question/30300585/answer/51335493" target="_blank" rel="noopener">https://www.zhihu.com/question/30300585/answer/51335493</a></p><p><strong>注： </strong><br>   类加载过程，总体是按照顺序，但并不是严格按照顺序进行的。比如：在加载过程中可能会执行初始化中的某些处理。</p><h2 id="JVM结束生命周期的方法"><a href="#JVM结束生命周期的方法" class="headerlink" title="JVM结束生命周期的方法"></a>JVM结束生命周期的方法</h2><ul><li><p>System.exit();</p></li><li><p>程序正常结束</p></li><li><p>遇到异常或者错误，异常终止</p></li><li><p>操作系统错误而导致（开发者不可控的因素）</p></li></ul>]]></content>
+        <content type="html"><![CDATA[<h1 id="类加载器解析以及阶段分解"><a href="#类加载器解析以及阶段分解" class="headerlink" title="类加载器解析以及阶段分解"></a>类加载器解析以及阶段分解</h1><p>java_<strong>类型</strong>_（不涉及对象）加载、连接和初始化都是在<strong>程序运行期间</strong>完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理）</p><p>用来加载类的工具就是类加载器</p><h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h2><p><img src="/2019/03/10/类加载过程简单介绍/img/流程.png" alt="详细流程图"></p><h3 id="1-加载："><a href="#1-加载：" class="headerlink" title="1. 加载："></a>1. <a href="/2019/03/18/JVM类的加载/"><strong>加载</strong></a>：</h3><pre><code>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在**运行时数据区的方法区**内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构</code></pre><h3 id="2-连接："><a href="#2-连接：" class="headerlink" title="2. 连接："></a>2. 连接：</h3><pre><code>* 验证：确保类加载的正确性* 准备：为类的静态变量分配内存，并初始化默认值* 解析：符号引用解析为直接引用</code></pre><p><a href="/2019/03/18/符号引用VS间接引用/">符号引用与直接引用介绍</a></p><h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. <a href="/2019/03/18/类初始化介绍/">初始化</a></h3><pre><code>类的静态变量赋予正确初始值</code></pre><h3 id="4-开发过程中类的使用："><a href="#4-开发过程中类的使用：" class="headerlink" title="4. 开发过程中类的使用："></a>4. 开发过程中类的使用：</h3><pre><code>调用类得相应的方法，开发者最常参与的过程</code></pre><h3 id="5-类的卸载："><a href="#5-类的卸载：" class="headerlink" title="5. 类的卸载："></a>5. 类的卸载：</h3><pre><code>内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型   已经不存在了，想要使用需要重新加载。例如：osgi）</code></pre><figure class="hljs highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"><br>  public static int a=1;<br><br>1. 静态变量a分配内存，初始化默认值为_**0**_<br>2. 在初始化过程中，为a赋值为1<br></code></pre></td></tr></table></figure><p><code>**注： **   类加载过程，总体是按照顺序，但并不是严格按照顺序进行的。比如：在加载过程中可能会执行初始化中的某些处理。</code></p><h2 id="JVM结束生命周期的方法"><a href="#JVM结束生命周期的方法" class="headerlink" title="JVM结束生命周期的方法"></a>JVM结束生命周期的方法</h2><ul><li><p>System.exit();</p></li><li><p>程序正常结束</p></li><li><p>遇到异常或者错误，异常终止</p></li><li><p>操作系统错误而导致（开发者不可控的因素）</p></li></ul>]]></content>
       
       
       <categories>
@@ -303,9 +428,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -314,9 +439,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
