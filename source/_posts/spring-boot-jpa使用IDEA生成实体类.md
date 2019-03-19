@@ -8,6 +8,7 @@ categories:
 ---
 
 1. View->Tool Windows->DataBase 添加数据库
+<!-- more -->
 2. File->Project Structure 如果没有点击加号加上 model ![Project Structure图片](img/Project Structure 图片.png)
 3. 添加完成后就会出现 Persistence 窗口(只有执行第二步之后才会出现)![Persistence位置.png](img/Persistence位置.png)
 4. 在 Persistence 窗口 右键选择->Generate Persistence Mapping->选择 By Database Schemas![Database Schemas](img/Database Schemas.png)

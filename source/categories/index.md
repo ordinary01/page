@@ -1,5 +1,5 @@
 ---
 title: categories
-date: 2019-03-11 00:41:04
-layout: categories
+date: 2019-03-20 00:31:04
+type: "categories"
 ---

@@ -13,6 +13,7 @@ categories:
 yum install net-tools
 ```
 
+<!-- more -->
 安装过程中可能会报 yum 异常，可以更改 yum 源
 可以参考 163 的源网站 <http://mirrors.163.com/.help/centos.html>
 

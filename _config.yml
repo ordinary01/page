@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Blog
+title: 记录成长
 subtitle:
-description:
+description: 敬胜怠,义胜欲。知其雄,守其雌
 keywords:
 author: 蒋大帅
-language: zh_CN
+language: zh-Hans
 timezone: 
 
 
@@ -91,7 +91,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: aria
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog</title>
+  <title>记录成长</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2019-03-18T17:08:38.219Z</updated>
+  <updated>2019-03-19T17:37:30.220Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -21,23 +21,14 @@
     <link href="https://blog.jiangdashuai.com/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
     <id>https://blog.jiangdashuai.com/2019/03/18/JAVA程序对类的使用方式/</id>
     <published>2019-03-18T15:30:51.000Z</published>
-    <updated>2019-03-18T17:08:38.219Z</updated>
+    <updated>2019-03-19T17:37:30.220Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;java程序对&lt;strong&gt;类&lt;/strong&gt;（&lt;code&gt;非对象&lt;/code&gt;）的使用方式分为两种：&lt;/p&gt;
+      &lt;p&gt;java程序对&lt;strong&gt;类&lt;/strong&gt;（&lt;code&gt;非对象&lt;/code&gt;）的使用方式分为两种：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;主动使用（类的首次主动使用会导致类的初始化）&lt;/li&gt;
 &lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;创建类的实例&lt;/li&gt;
-&lt;li&gt;访问某个类或者接口的静
-        
-      
     
     </summary>
     
@@ -53,17 +44,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/"/>
     <id>https://blog.jiangdashuai.com/2019/03/18/JVM类的加载/</id>
     <published>2019-03-18T15:05:45.000Z</published>
-    <updated>2019-03-18T16:07:13.848Z</updated>
+    <updated>2019-03-19T17:31:52.792Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在&lt;strong&gt;运行时数据区的方法区&lt;/strong&gt;内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在
-        
-      
+      &lt;p&gt;类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在&lt;strong&gt;运行时数据区的方法区&lt;/strong&gt;内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构。&lt;br&gt;类不管生成多少个实例，它对应的Class对象只有唯一的一个，这里的Class对象就是唯一的那一个。&lt;br&gt;
     
     </summary>
     
@@ -79,17 +64,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/18/%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D/"/>
     <id>https://blog.jiangdashuai.com/2019/03/18/类初始化介绍/</id>
     <published>2019-03-18T14:59:25.000Z</published>
-    <updated>2019-03-18T16:47:07.684Z</updated>
+    <updated>2019-03-19T17:33:30.663Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;所有的Java虚拟机实现必须在每个类或接口被Java程序 “&lt;a href=&quot;/2019/03/18/JAVA程序对类的使用方式/&quot;&gt;&lt;strong&gt;&lt;code&gt;首次主动使用&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;”
-        
-      
+      &lt;p&gt;所有的Java虚拟机实现必须在每个类或接口被Java程序 “&lt;a href=&quot;/2019/03/18/JAVA程序对类的使用方式/&quot;&gt;&lt;strong&gt;&lt;code&gt;首次主动使用&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;” 时才初始化他们&lt;br&gt;被动使用都不会导致类的初始化&lt;/p&gt;
     
     </summary>
     
@@ -105,18 +84,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/"/>
     <id>https://blog.jiangdashuai.com/2019/03/18/符号引用VS间接引用/</id>
     <published>2019-03-18T14:45:55.000Z</published>
-    <updated>2019-03-18T14:46:38.377Z</updated>
+    <updated>2019-03-19T17:33:23.461Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;符号（间接）引用解析直接引用&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;符号引用&lt;/strong&gt;就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/l
-        
-      
+      &lt;p&gt;&lt;strong&gt;符号引用&lt;/strong&gt;就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。&lt;br&gt;
     
     </summary>
     
@@ -184,20 +156,14 @@
     <link href="https://blog.jiangdashuai.com/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/"/>
     <id>https://blog.jiangdashuai.com/2019/03/11/Centos中Python2-x-升级3-x/</id>
     <published>2019-03-10T16:12:29.000Z</published>
-    <updated>2019-03-15T14:33:12.203Z</updated>
+    <updated>2019-03-19T17:31:30.606Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ul&gt;
+      &lt;ul&gt;
 &lt;li&gt;查看当前 python 版本&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;python --version&lt;br&gt;python -V&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -215,17 +181,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/Mac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/</id>
     <published>2019-03-10T15:57:45.000Z</published>
-    <updated>2019-03-15T14:33:12.211Z</updated>
+    <updated>2019-03-19T17:36:09.242Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;1.Pycharm-&amp;gt;Preferences&lt;img src=&quot;/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/img/进入属性.png&quot; alt=&quot;进入属性&quot;&gt;&lt;br&gt;2.Project:项目名-&amp;gt;Project
-        
-      
+      &lt;p&gt;mac中安装pycharm并通过Anaconda管理python包&lt;br&gt;
     
     </summary>
     
@@ -245,17 +205,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/PyCharm不能编辑/</id>
     <published>2019-03-10T15:55:33.000Z</published>
-    <updated>2019-03-15T14:33:12.218Z</updated>
+    <updated>2019-03-19T17:32:17.901Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator&lt;br&gt;&lt;code&gt;Tools -&amp;gt; Vim Emulator&lt;/code&gt;&lt;br&gt;&lt;img src=&quot;/img/img.png&quot;
-        
-      
+      &lt;p&gt;是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator&lt;br&gt;
     
     </summary>
     
@@ -273,19 +227,13 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/Mac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/Mac-中添加-Docker-的国内镜像/</id>
     <published>2019-03-10T15:52:10.000Z</published>
-    <updated>2019-03-15T14:33:12.205Z</updated>
+    <updated>2019-03-19T17:34:49.893Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;点击 Docker 设置&lt;br&gt;&lt;img src=&quot;/2019/03/10/Mac-中添加-Docker-的国内镜像/img/Docker.png&quot; alt=&quot;Docker&quot;&gt;&lt;/li&gt;
-&lt;li&gt;Preferences-&amp;gt;Daemon&lt;br&gt;&lt;img
-        
-      
+      &lt;ol&gt;
+&lt;li&gt;点击 Docker 设置&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -303,17 +251,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/springboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/springboot-连接数据库/</id>
     <published>2019-03-10T15:50:16.000Z</published>
-    <updated>2019-03-15T14:33:12.230Z</updated>
+    <updated>2019-03-19T17:32:50.803Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
-        
-      
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;WARN: Establishing SSL connection without server&lt;span class=&quot;hljs-string&quot;&gt;&#39;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&#39;&lt;/span&gt;t &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt;. For compliance with existing applications not using SSL the verifyServerCertificate property is &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt; to &lt;span class=&quot;hljs-string&quot;&gt;&#39;false&#39;&lt;/span&gt;. You need either to explicitly &lt;span class=&quot;hljs-built_in&quot;&gt;disable&lt;/span&gt; SSL by setting useSSL=&lt;span class=&quot;hljs-literal&quot;&gt;false&lt;/span&gt;, or &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt; useSSL=&lt;span class=&quot;hljs-literal&quot;&gt;true&lt;/span&gt; and provide truststore &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; server certificate verification.&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -329,17 +271,11 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/Spring-%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9B%B8%E5%B7%AE%E5%85%AB%E4%B8%AA%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/Spring-中获取时间相差八个小时解决/</id>
     <published>2019-03-10T15:43:31.000Z</published>
-    <updated>2019-03-15T14:33:12.221Z</updated>
+    <updated>2019-03-19T17:32:44.628Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;a href=&quot;#获取时间与真实时间相差八小时问题&quot; class=&quot;headerlink&quot; title=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;/a&gt;获取时间与真实时间相差八小时问题&lt;/h1&gt;&lt;h2
-        
-      
+      &lt;h1 id=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;a href=&quot;#获取时间与真实时间相差八小时问题&quot; class=&quot;headerlink&quot; title=&quot;获取时间与真实时间相差八小时问题&quot;&gt;&lt;/a&gt;获取时间与真实时间相差八小时问题&lt;/h1&gt;&lt;h2 id=&quot;问题-1：&quot;&gt;&lt;a href=&quot;#问题-1：&quot; class=&quot;headerlink&quot; title=&quot;问题 1：&quot;&gt;&lt;/a&gt;问题 1：&lt;/h2&gt;&lt;p&gt;spring 时间&lt;strong&gt;格式化转换&lt;/strong&gt;之后与当前时间相差八个小时&lt;/p&gt;
     
     </summary>
     
@@ -355,19 +291,12 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa使用IDEA生成实体类/</id>
     <published>2019-03-10T15:35:37.000Z</published>
-    <updated>2019-03-15T14:33:12.222Z</updated>
+    <updated>2019-03-19T17:32:28.201Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;ol&gt;
-&lt;li&gt;View-&amp;gt;Tool Windows-&amp;gt;DataBase 添加数据库&lt;/li&gt;
-&lt;li&gt;File-&amp;gt;Project Structure 如果没有点击加号加上 model &lt;img src=&quot;img/Project Structure
-        
-      
+      &lt;ol&gt;
+&lt;li&gt;View-&amp;gt;Tool Windows-&amp;gt;DataBase 添加数据库
     
     </summary>
     
@@ -383,18 +312,12 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/Docker%E8%AE%BE%E7%BD%AE%E5%86%85%E9%83%A8%E6%97%B6%E9%97%B4%E4%B8%BA%E4%B8%9C%E5%85%AB%E5%8C%BA/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/Docker设置内部时间为东八区/</id>
     <published>2019-03-10T15:24:27.000Z</published>
-    <updated>2019-03-15T14:33:12.204Z</updated>
+    <updated>2019-03-19T17:36:40.413Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;在 Dockerfile 或者 Docker Compose 中加入&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span
-        
-      
+      &lt;p&gt;在 Dockerfile 或者 Docker Compose 中加入&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \&lt;br&gt;    &amp;amp;&amp;amp; &lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&#39;Asia/Shanghai&#39;&lt;/span&gt; &amp;gt;/etc/timezone&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -410,18 +333,12 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/</id>
     <published>2019-03-10T15:02:48.000Z</published>
-    <updated>2019-03-15T14:33:12.230Z</updated>
+    <updated>2019-03-19T17:33:00.625Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;安装 net 工具&lt;/p&gt;
-&lt;figure class=&quot;hljs highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td
-        
-      
+      &lt;p&gt;安装 net 工具&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;yum install net-tools&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -437,17 +354,12 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/类加载过程简单介绍/</id>
     <published>2019-03-10T14:21:09.000Z</published>
-    <updated>2019-03-18T17:13:24.101Z</updated>
+    <updated>2019-03-19T17:33:40.216Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id=&quot;类加载器解析以及阶段分解&quot;&gt;&lt;a href=&quot;#类加载器解析以及阶段分解&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h1 id=&quot;类加载器解析以及阶段分解&quot;&gt;&lt;a href=&quot;#类加载器解析以及阶段分解&quot; class=&quot;headerlink&quot; title=&quot;类加载器解析以及阶段分解&quot;&gt;&lt;/a&gt;类加载器解析以及阶段分解&lt;/h1&gt;&lt;p&gt;java_&lt;strong&gt;类型&lt;/strong&gt;_（不涉及对象）加载、连接和初始化都是在&lt;strong&gt;程序运行期间&lt;/strong&gt;完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理）&lt;/p&gt;
+&lt;p&gt;用来加载类的工具就是类加载器&lt;/p&gt;
     
     </summary>
     

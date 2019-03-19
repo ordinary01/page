@@ -8,6 +8,8 @@ categories:
     - docker
 ---
 1. 点击 Docker 设置
+
+<!-- more -->
 ![Docker](img/Docker.png)
 2. Preferences->Daemon
 ![添加样式](img/添加样式.png)
