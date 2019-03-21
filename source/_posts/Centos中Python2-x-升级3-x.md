@@ -14,7 +14,9 @@ categories:
 python --version
 python -V
 ```
+
 <!-- more -->
+
 - 下载最新的 python 版本
 
 ```bash
