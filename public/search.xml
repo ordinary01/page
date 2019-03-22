@@ -4,11 +4,36 @@
   
     
     <entry>
+      <title>助记符</title>
+      <link href="/2019/03/22/%E5%8A%A9%E8%AE%B0%E7%AC%A6/"/>
+      <url>/2019/03/22/%E5%8A%A9%E8%AE%B0%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p><code>常见助记符：</code></p><ul><li>getstatic : 获取静态变量</li></ul><a id="more"></a><ul><li>putstatic : 静态变量赋值</li><li>invokestatic : 调用静态方法</li><li>ldc : 表示将 int，float 或是 String 类型的常量值从常量池提送至栈顶</li><li>bipush : 表示将字节（-128 ~ 127）的常量值推送至栈顶</li><li>sipush : 表示将一个短整型常量值(-32768 ~ 32767) 推送至栈顶</li><li>iconst_1 : 表示将 int 类型 1 推送至栈顶 （iconst_1 - iconst_5 分别表示将 1 至 5 推送至栈顶）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> JVM学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> jvm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JAVA程序对类的使用方式</title>
       <link href="/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
       <url>/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/</url>
       
-        <content type="html"><![CDATA[<p>java程序对<strong>类</strong>（<code>非对象</code>）的使用方式分为两种：</p><ul><li>主动使用（类的首次主动使用会导致类的初始化）</li></ul><a id="more"></a><ol><li>创建类的实例</li><li>访问某个类或者接口的静态变量，或者对该静态变量赋值</li><li>调用类的静态方法</li><li>反射 Class.forName(“com.test.Test”);</li><li>初始化一个类的子类</li><li>JVM启动时被表名为启动类的类</li><li>JDK1.7提供的动态语言支持：<br> java.lang.invoke.MethodHandle实例的解析结果REF_getStatic,REF_putStatic,REF_invokeStatic句柄对应的类没有初始化则初始化</li></ol><ul><li>被动使用</li></ul><p>所有非主动使用的使用方式都是对类的被动使用，都不会导致类的初始化</p><p><code>助记符：</code><br>getstatic : 获取静态变量<br>putstatic : 静态变量赋值<br>invokestatic : 调用静态方法</p>]]></content>
+        <content type="html"><![CDATA[<p>java 程序对<strong>类</strong>（<code>非对象</code>）的使用方式分为两种：</p><ul><li>主动使用（类的首次主动使用会导致类的初始化）</li></ul><a id="more"></a><ol><li>创建类的实例</li><li>访问某个类或者接口的静态变量，或者对该静态变量赋值</li><li>调用类的静态方法</li><li>反射 Class.forName(“com.test.Test”);</li><li>初始化一个类的子类</li><li>JVM 启动时被表名为启动类的类</li><li>JDK1.7 提供的动态语言支持：<br>java.lang.invoke.MethodHandle 实例的解析结果 REF_getStatic,REF_putStatic,REF_invokeStatic 句柄对应的类没有初始化则初始化</li></ol><ul><li>被动使用</li></ul><p>所有非主动使用的使用方式都是对类的被动使用，都不会导致类的初始化</p>]]></content>
       
       
       <categories>
@@ -214,7 +239,7 @@
       <link href="/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/"/>
       <url>/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/</url>
       
-        <content type="html"><![CDATA[<p>是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator<br><a id="more"></a><br><code>Tools -&gt; Vim Emulator</code><br><img src="/img/img.png" alt="修改图片"></p>]]></content>
+        <content type="html"><![CDATA[<p>是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator<br><a id="more"></a><br><code>Tools -&gt; Vim Emulator</code><br><img src="img/img.png" alt="修改图片"></p>]]></content>
       
       
       <categories>
