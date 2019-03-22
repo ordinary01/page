@@ -344,16 +344,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/11/Centos中Python2-x-升级3-x/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/11/Centos中Python2-x-升级3-x/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -392,58 +382,58 @@
         <ul>
 <li>查看当前 python 版本</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">python --version<br>python -V<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br><span class="line">python -V</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <ul>
 <li>下载最新的 python 版本</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz</span><br></pre></td></tr></table></figure>
 <ul>
 <li>解压</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">tar -zxvf Python-3.7.2.tgz<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.2.tgz</span><br></pre></td></tr></table></figure>
 <ul>
 <li>进入解压的 python 文件夹</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> Python-3.5.2/<br> ./configure<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.5.2/</span><br><span class="line"> ./configure</span><br></pre></td></tr></table></figure>
 <ul>
 <li>可能会报错</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">configure: error: no acceptable C compiler found <span class="hljs-keyword">in</span> <span class="hljs-variable">$PATH</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">configure: error: no acceptable C compiler found <span class="keyword">in</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum 更新</a> )</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">yum install make gcc gcc-c++<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install make gcc gcc-c++</span><br></pre></td></tr></table></figure>
 <ul>
 <li>然后再执行</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">./configure<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure>
 <ul>
 <li>编译(时间较长)</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
 <ul>
 <li>安装</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make  install<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make  install</span><br></pre></td></tr></table></figure>
 <ul>
 <li>这个时候查看 python 版本的还是 2.x 访问 python3 的版本是 3.x; 查看 python 的链接情况</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash"> ls -al /usr/bin | grep python<br>-rwxr-xr-x.  1 root root      11216 12月  1 2015 abrt-action-analyze-python<br>lrwxrwxrwx.  1 root root          7 8月  30 12:11 python -&gt; python2<br>lrwxrwxrwx.  1 root root          9 8月  30 12:11 python2 -&gt; python2.7<br>-rwxr-xr-x.  1 root root       7136 11月 20 2015 python2.7<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ls -al /usr/bin | grep python</span><br><span class="line">-rwxr-xr-x.  1 root root      11216 12月  1 2015 abrt-action-analyze-python</span><br><span class="line">lrwxrwxrwx.  1 root root          7 8月  30 12:11 python -&gt; python2</span><br><span class="line">lrwxrwxrwx.  1 root root          9 8月  30 12:11 python2 -&gt; python2.7</span><br><span class="line">-rwxr-xr-x.  1 root root       7136 11月 20 2015 python2.7</span><br></pre></td></tr></table></figure>
 <ul>
 <li>将原来的 python 的软链接重命名</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">mv /usr/bin/python /usr/bin/python.bak<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br></pre></td></tr></table></figure>
 <ul>
 <li>将 python 链接至 python3</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">ln -s /usr/<span class="hljs-built_in">local</span>/bin/python3 /usr/bin/python<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/bin/python3 /usr/bin/python</span><br></pre></td></tr></table></figure>
 <p>变为<br><img src="img/f6a97143f25a4971157854be5a0e310.png" alt="f6a97143f25a4971157854be5a0e310.png"></p>
 <ul>
 <li>查看 python 发现已经是 3.x 的版本</li>
 </ul>
 <p>最后会发现 yum 不能使用，由于 yum 引用了 python 需要将 yum 的配置更改</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">vi /usr/bin/yum<br>vi /usr/libexec/urlgrabber-ext-down<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br><span class="line">vi /usr/libexec/urlgrabber-ext-down</span><br></pre></td></tr></table></figure>
 <p>将 <em>#!/usr/bin/python 改为 #!/usr/bin/python2.7</em> 就好了</p>
 <p>本文参考：<br><a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>
 
@@ -570,7 +560,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -792,8 +782,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
     

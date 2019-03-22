@@ -342,16 +342,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/10/Docker设置内部时间为东八区/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/10/Docker设置内部时间为东八区/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -388,7 +378,7 @@
 
       
         <p>在 Dockerfile 或者 Docker Compose 中加入</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \<br>    &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">'Asia/Shanghai'</span> &gt;/etc/timezone<br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \</span><br><span class="line">    &amp;&amp; <span class="built_in">echo</span> <span class="string">'Asia/Shanghai'</span> &gt;/etc/timezone</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
       
     </div>
@@ -511,7 +501,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -733,8 +723,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
     

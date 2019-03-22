@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2019-03-22T14:14:03.398Z</updated>
+  <updated>2019-03-22T15:56:54.700Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -17,11 +17,51 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>虚拟机参数</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/22/虚拟机参数/</id>
+    <published>2019-03-22T15:38:38.000Z</published>
+    <updated>2019-03-22T15:56:54.700Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;虚拟机参数&quot;&gt;&lt;a href=&quot;#虚拟机参数&quot; class=&quot;headerlink&quot; title=&quot;虚拟机参数&quot;&gt;&lt;/a&gt;虚拟机参数&lt;/h1&gt;&lt;h2 id=&quot;JVM参数规则&quot;&gt;&lt;a href=&quot;#JVM参数规则&quot; class=&quot;headerlink&quot; title=&quot;JVM参数规则&quot;&gt;&lt;/a&gt;JVM参数规则&lt;/h2&gt;&lt;p&gt;所有的JVM参数都是以 -XX：开头&lt;br&gt;-XX:+option ，表示开启option选项&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JVM学习" scheme="https://blog.jiangdashuai.com/categories/JVM%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2.常量的本质含义与反编译介绍</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/22/%E5%B8%B8%E9%87%8F%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%90%AB%E4%B9%89%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91%E4%BB%8B%E7%BB%8D/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/22/常量的本质含义与反编译介绍/</id>
+    <published>2019-03-22T15:21:29.000Z</published>
+    <updated>2019-03-22T16:34:30.998Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;常量的本质含义与反编译介绍&quot;&gt;&lt;a href=&quot;#常量的本质含义与反编译介绍&quot; class=&quot;headerlink&quot; title=&quot;常量的本质含义与反编译介绍&quot;&gt;&lt;/a&gt;常量的本质含义与反编译介绍&lt;/h1&gt;&lt;h2 id=&quot;常量的本质&quot;&gt;&lt;a href=&quot;#常量的本质&quot; class=&quot;headerlink&quot; title=&quot;常量的本质&quot;&gt;&lt;/a&gt;常量的本质&lt;/h2&gt;&lt;p&gt;常量在编译阶段会存入到调用这个常量的方法所在类的常量池中，&lt;br&gt;本质上，调用类并没有引用到定义常量的类，因此并不会触发定义常量的类的初始化。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="JVM学习" scheme="https://blog.jiangdashuai.com/categories/JVM%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>助记符</title>
     <link href="https://blog.jiangdashuai.com/2019/03/22/%E5%8A%A9%E8%AE%B0%E7%AC%A6/"/>
     <id>https://blog.jiangdashuai.com/2019/03/22/助记符/</id>
     <published>2019-03-22T09:47:22.000Z</published>
-    <updated>2019-03-22T14:14:03.398Z</updated>
+    <updated>2019-03-22T15:25:35.604Z</updated>
     
     <summary type="html">
     
@@ -186,7 +226,7 @@
       &lt;ul&gt;
 &lt;li&gt;查看当前 python 版本&lt;/li&gt;
 &lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;python --version&lt;br&gt;python -V&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python --version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python -V&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -278,7 +318,7 @@
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;WARN: Establishing SSL connection without server&lt;span class=&quot;hljs-string&quot;&gt;&#39;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&#39;&lt;/span&gt;t &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt;. For compliance with existing applications not using SSL the verifyServerCertificate property is &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt; to &lt;span class=&quot;hljs-string&quot;&gt;&#39;false&#39;&lt;/span&gt;. You need either to explicitly &lt;span class=&quot;hljs-built_in&quot;&gt;disable&lt;/span&gt; SSL by setting useSSL=&lt;span class=&quot;hljs-literal&quot;&gt;false&lt;/span&gt;, or &lt;span class=&quot;hljs-built_in&quot;&gt;set&lt;/span&gt; useSSL=&lt;span class=&quot;hljs-literal&quot;&gt;true&lt;/span&gt; and provide truststore &lt;span class=&quot;hljs-keyword&quot;&gt;for&lt;/span&gt; server certificate verification.&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;WARN: Establishing SSL connection without server&lt;span class=&quot;string&quot;&gt;&#39;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&#39;&lt;/span&gt;t &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;. For compliance with existing applications not using SSL the verifyServerCertificate property is &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; to &lt;span class=&quot;string&quot;&gt;&#39;false&#39;&lt;/span&gt;. You need either to explicitly &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; SSL by setting useSSL=&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;, or &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; useSSL=&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; and provide truststore &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; server certificate verification.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -314,12 +354,12 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/spring-boot-jpa使用IDEA生成实体类/</id>
     <published>2019-03-10T15:35:37.000Z</published>
-    <updated>2019-03-19T17:32:28.201Z</updated>
+    <updated>2019-03-22T15:47:05.523Z</updated>
     
     <summary type="html">
     
       &lt;ol&gt;
-&lt;li&gt;View-&amp;gt;Tool Windows-&amp;gt;DataBase 添加数据库
+&lt;li&gt;&lt;p&gt;View-&amp;gt;Tool Windows-&amp;gt;DataBase 添加数据库
     
     </summary>
     
@@ -340,7 +380,7 @@
     <summary type="html">
     
       &lt;p&gt;在 Dockerfile 或者 Docker Compose 中加入&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \&lt;br&gt;    &amp;amp;&amp;amp; &lt;span class=&quot;hljs-built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;hljs-string&quot;&gt;&#39;Asia/Shanghai&#39;&lt;/span&gt; &amp;gt;/etc/timezone&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;amp;&amp;amp; &lt;span class=&quot;built_in&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&#39;Asia/Shanghai&#39;&lt;/span&gt; &amp;gt;/etc/timezone&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -361,7 +401,7 @@
     <summary type="html">
     
       &lt;p&gt;安装 net 工具&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;code class=&quot;hljs bash&quot;&gt;yum install net-tools&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install net-tools&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -377,7 +417,7 @@
     <link href="https://blog.jiangdashuai.com/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
     <id>https://blog.jiangdashuai.com/2019/03/10/类加载过程简单介绍/</id>
     <published>2019-03-10T14:21:09.000Z</published>
-    <updated>2019-03-19T17:33:40.216Z</updated>
+    <updated>2019-03-22T16:23:05.589Z</updated>
     
     <summary type="html">
     

@@ -57,7 +57,6 @@ relative_link: false
 future: true
 highlight:
   enable: true
-  hljs: true # 添加这一行！
   line_number: true
   auto_detect: false
   tab_replace:

@@ -342,16 +342,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/10/springboot-连接数据库/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/10/springboot-连接数据库/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
           
 
           
@@ -387,10 +377,10 @@
       
 
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">WARN: Establishing SSL connection without server<span class="hljs-string">'s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn'</span>t <span class="hljs-built_in">set</span>. For compliance with existing applications not using SSL the verifyServerCertificate property is <span class="hljs-built_in">set</span> to <span class="hljs-string">'false'</span>. You need either to explicitly <span class="hljs-built_in">disable</span> SSL by setting useSSL=<span class="hljs-literal">false</span>, or <span class="hljs-built_in">set</span> useSSL=<span class="hljs-literal">true</span> and provide truststore <span class="hljs-keyword">for</span> server certificate verification.<br></code></pre></td></tr></table></figure>
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARN: Establishing SSL connection without server<span class="string">'s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn'</span>t <span class="built_in">set</span>. For compliance with existing applications not using SSL the verifyServerCertificate property is <span class="built_in">set</span> to <span class="string">'false'</span>. You need either to explicitly <span class="built_in">disable</span> SSL by setting useSSL=<span class="literal">false</span>, or <span class="built_in">set</span> useSSL=<span class="literal">true</span> and provide truststore <span class="keyword">for</span> server certificate verification.</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>由于使用 ssl 连接，但是没配置 ssl 信息；如果不用 ssl 连接可以在连接中增加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">jdbc.url=jdbc:mysql://localhost:3306/esps?useSSL=<span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdbc.url=jdbc:mysql://localhost:3306/esps?useSSL=<span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -513,7 +503,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -735,8 +725,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://.disqus.com/count.js" async></script>
     
 
     
