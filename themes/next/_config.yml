@@ -356,7 +356,7 @@ baidu_analytics: dff5741bcf3af0cad0ffaad747d282e0
 disqus:
   enable: flase
   shortname:
-  count: true
+  count: false
 
 # Hypercomments
 #hypercomments_id:
@@ -523,9 +523,9 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  enable: true
+  app_id: 5Jz23oIWCHoviS033ljYAG1F-gzGzoHsz
+  app_key: btBfScCVNc44LKOEqXRJatbF
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -545,15 +545,15 @@ busuanzi_count:
   # custom uv span for the whole site
   site_uv: true
   site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
+  site_uv_footer: 
   # custom pv span for the whole site
   site_pv: true
   site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
+  site_pv_footer: 
   # custom pv span for one page only
   page_pv: true
   page_pv_header: <i class="fa fa-file-o"></i>
-  page_pv_footer:
+  page_pv_footer: 
 
 # Tencent analytics ID
 # tencent_analytics:
