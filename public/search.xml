@@ -1,527 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>虚拟机参数</title>
-      <link href="/2019/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0/"/>
-      <url>/2019/03/22/%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0/</url>
-      
-        <content type="html"><![CDATA[<h1 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h1><h2 id="JVM参数规则"><a href="#JVM参数规则" class="headerlink" title="JVM参数规则"></a>JVM参数规则</h2><p>所有的JVM参数都是以 -XX：开头<br>-XX:+option ，表示开启option选项<br><a id="more"></a><br>-XX:-option ，表示关闭option选项<br>-XX：option=value ，表示将option选项的值设置为value</p><h2 id="常用参数："><a href="#常用参数：" class="headerlink" title="常用参数："></a>常用参数：</h2><p>-XX：+TraceClassLoading，用于追踪类的加载信息并打印<br>-XX: +TaceClassUnloading，用户追踪累的卸载信息并打印</p><p>配置方法以IDEA为例<br><img src="img/IDEA设置VMoptions.png" alt="IDEA设置VMoptions.png"></p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[虚拟机参数]]></title>
+    <url>%2F2019%2F03%2F22%2F%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[虚拟机参数JVM参数规则所有的JVM参数都是以 -XX：开头-XX:+option ，表示开启option选项-XX:-option ，表示关闭option选项-XX：option=value ，表示将option选项的值设置为value 常用参数：-XX：+TraceClassLoading，用于追踪类的加载信息并打印-XX: +TaceClassUnloading，用户追踪累的卸载信息并打印 配置方法以IDEA为例]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2.常量的本质含义与反编译介绍</title>
-      <link href="/2019/03/22/%E5%B8%B8%E9%87%8F%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%90%AB%E4%B9%89%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2019/03/22/%E5%B8%B8%E9%87%8F%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%90%AB%E4%B9%89%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91%E4%BB%8B%E7%BB%8D/</url>
-      
-        <content type="html"><![CDATA[<h1 id="常量的本质含义与反编译介绍"><a href="#常量的本质含义与反编译介绍" class="headerlink" title="常量的本质含义与反编译介绍"></a>常量的本质含义与反编译介绍</h1><h2 id="常量的本质"><a href="#常量的本质" class="headerlink" title="常量的本质"></a>常量的本质</h2><p>常量在编译阶段会存入到调用这个常量的方法所在类的常量池中，<br>本质上，调用类并没有引用到定义常量的类，因此并不会触发定义常量的类的初始化。<br><a id="more"></a></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> test.jvm;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(Parent.str);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String str=<span class="string">"hello world"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"parent static block"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>执行结果为</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">hello world</span><br><span class="line">说明Parent类的静态代码块根本没有执行</span><br><span class="line">注意：像文章开头说的那样，这里是将常量存放到了Test的常量池中，之后又Test与Parent就没有任何关系了，设置可以已经Parent的class文件删除，一样可以打印出常量的内容</span><br></pre></td></tr></table></figure><h2 id="反编译"><a href="#反编译" class="headerlink" title="反编译"></a>反编译</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">javap -c Test</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">test</span>.<span class="title">jvm</span>.<span class="title">Test</span> </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> test.jvm.Test();</span><br><span class="line">    Code:</span><br><span class="line">       <span class="number">0</span>: aload_0</span><br><span class="line">       1: invokespecial #1                  // Method java/lang/Object."&lt;init&gt;":()V</span><br><span class="line">       <span class="number">4</span>: <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(java.lang.String[])</span></span>;</span><br><span class="line">    Code:</span><br><span class="line">       0: getstatic     #2                  // Field java/lang/System.out:Ljava/io/PrintStream;</span><br><span class="line">       3: ldc           #4                  // String hello world</span><br><span class="line">       5: invokevirtual #5                  // Method java/io/PrintStream.println:(Ljava/lang/String;)V</span><br><span class="line">       <span class="number">8</span>: <span class="keyword">return</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>反编译Test.class之后生成内容，其中有很多<a href="/2019/03/22/助记符/#more">助记符</a>，<br>ldc表示在编译过程中先将字符串“hello world”推送至栈顶，<br>这就印证了开头说的<br><strong>常量在编译阶段会存入到调用这个常量的方法所在类的常量池中，<br>本质上，调用类并没有引用到定义常量的类，因此并不会触发定义常量的类的初始化。</strong></p>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2.常量的本质含义与反编译介绍]]></title>
+    <url>%2F2019%2F03%2F22%2F%E5%B8%B8%E9%87%8F%E7%9A%84%E6%9C%AC%E8%B4%A8%E5%90%AB%E4%B9%89%E4%B8%8E%E5%8F%8D%E7%BC%96%E8%AF%91%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[常量的本质含义与反编译介绍常量的本质常量在编译阶段会存入到调用这个常量的方法所在类的常量池中，本质上，调用类并没有引用到定义常量的类，因此并不会触发定义常量的类的初始化。 12345678910111213141516package test.jvm;public class Test &#123; public static void main(String[] args) &#123; System.out.println(Parent.str); &#125;&#125;class Parent&#123; public static final String str="hello world"; static &#123; System.out.println("parent static block"); &#125;&#125; 执行结果为 1234hello world说明Parent类的静态代码块根本没有执行注意：像文章开头说的那样，这里是将常量存放到了Test的常量池中，之后又Test与Parent就没有任何关系了，设置可以已经Parent的class文件删除，一样可以打印出常量的内容 反编译12345678910111213141516javap -c Testpublic class test.jvm.Test &#123; public test.jvm.Test(); Code: 0: aload_0 1: invokespecial #1 // Method java/lang/Object."&lt;init&gt;":()V 4: return public static void main(java.lang.String[]); Code: 0: getstatic #2 // Field java/lang/System.out:Ljava/io/PrintStream; 3: ldc #4 // String hello world 5: invokevirtual #5 // Method java/io/PrintStream.println:(Ljava/lang/String;)V 8: return&#125; 反编译Test.class之后生成内容，其中有很多助记符，ldc表示在编译过程中先将字符串“hello world”推送至栈顶，这就印证了开头说的常量在编译阶段会存入到调用这个常量的方法所在类的常量池中，本质上，调用类并没有引用到定义常量的类，因此并不会触发定义常量的类的初始化。]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>助记符</title>
-      <link href="/2019/03/22/%E5%8A%A9%E8%AE%B0%E7%AC%A6/"/>
-      <url>/2019/03/22/%E5%8A%A9%E8%AE%B0%E7%AC%A6/</url>
-      
-        <content type="html"><![CDATA[<p><code>常见助记符：</code></p><ul><li>getstatic : 获取静态变量</li></ul><a id="more"></a><ul><li>putstatic : 静态变量赋值</li><li>invokestatic : 调用静态方法</li><li>ldc : 表示将 int，float 或是 String 类型的常量值从常量池提送至栈顶</li><li>bipush : 表示将字节（-128 ~ 127）的常量值推送至栈顶</li><li>sipush : 表示将一个短整型常量值(-32768 ~ 32767) 推送至栈顶</li><li>iconst_1 : 表示将 int 类型 1 推送至栈顶 （iconst_1 - iconst_5 分别表示将 1 至 5 推送至栈顶）</li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[助记符]]></title>
+    <url>%2F2019%2F03%2F22%2F%E5%8A%A9%E8%AE%B0%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[常见助记符： getstatic : 获取静态变量 putstatic : 静态变量赋值 invokestatic : 调用静态方法 ldc : 表示将 int，float 或是 String 类型的常量值从常量池提送至栈顶 bipush : 表示将字节（-128 ~ 127）的常量值推送至栈顶 sipush : 表示将一个短整型常量值(-32768 ~ 32767) 推送至栈顶 iconst_1 : 表示将 int 类型 1 推送至栈顶 （iconst_1 - iconst_5 分别表示将 1 至 5 推送至栈顶）]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JAVA程序对类的使用方式</title>
-      <link href="/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/"/>
-      <url>/2019/03/18/JAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/</url>
-      
-        <content type="html"><![CDATA[<p>java 程序对<strong>类</strong>（<code>非对象</code>）的使用方式分为两种：</p><ul><li>主动使用（类的首次主动使用会导致类的初始化）</li></ul><a id="more"></a><ol><li>创建类的实例</li><li>访问某个类或者接口的静态变量，或者对该静态变量赋值</li><li>调用类的静态方法</li><li>反射 Class.forName(“com.test.Test”);</li><li>初始化一个类的子类</li><li>JVM 启动时被表名为启动类的类</li><li>JDK1.7 提供的动态语言支持：<br>java.lang.invoke.MethodHandle 实例的解析结果 REF_getStatic,REF_putStatic,REF_invokeStatic 句柄对应的类没有初始化则初始化</li></ol><ul><li>被动使用</li></ul><p>所有非主动使用的使用方式都是对类的被动使用，都不会导致类的初始化</p>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JAVA程序对类的使用方式]]></title>
+    <url>%2F2019%2F03%2F18%2FJAVA%E7%A8%8B%E5%BA%8F%E5%AF%B9%E7%B1%BB%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[java 程序对类（非对象）的使用方式分为两种： 主动使用（类的首次主动使用会导致类的初始化） 创建类的实例 访问某个类或者接口的静态变量，或者对该静态变量赋值 调用类的静态方法 反射 Class.forName(“com.test.Test”); 初始化一个类的子类 JVM 启动时被表名为启动类的类 JDK1.7 提供的动态语言支持：java.lang.invoke.MethodHandle 实例的解析结果 REF_getStatic,REF_putStatic,REF_invokeStatic 句柄对应的类没有初始化则初始化 被动使用 所有非主动使用的使用方式都是对类的被动使用，都不会导致类的初始化]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>JVM类的加载</title>
-      <link href="/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/"/>
-      <url>/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/</url>
-      
-        <content type="html"><![CDATA[<p>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在<strong>运行时数据区的方法区</strong>内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构。<br>类不管生成多少个实例，它对应的Class对象只有唯一的一个，这里的Class对象就是唯一的那一个。<br><a id="more"></a><br>加载.class文件的方式</p><ol><li>从本地系统中直接加载</li><li>通过网络下载.class文件</li><li>从zip,jar等归档文件中加载.class文件</li><li>从专有数据库中提取.class文件</li><li>将java源文件动态编译为.class 文件（例如：jsp）</li></ol>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[JVM类的加载]]></title>
+    <url>%2F2019%2F03%2F18%2FJVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD%2F</url>
+    <content type="text"><![CDATA[类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法区内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构。类不管生成多少个实例，它对应的Class对象只有唯一的一个，这里的Class对象就是唯一的那一个。加载.class文件的方式 从本地系统中直接加载 通过网络下载.class文件 从zip,jar等归档文件中加载.class文件 从专有数据库中提取.class文件 将java源文件动态编译为.class 文件（例如：jsp）]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>类初始化介绍</title>
-      <link href="/2019/03/18/%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2019/03/18/%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D/</url>
-      
-        <content type="html"><![CDATA[<p>所有的Java虚拟机实现必须在每个类或接口被Java程序 “<a href="/2019/03/18/JAVA程序对类的使用方式/"><strong><code>首次主动使用</code></strong></a>” 时才初始化他们<br>被动使用都不会导致类的初始化</p><a id="more"></a><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyParent1</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String str=<span class="string">"Hello"</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"parent"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyChild</span> <span class="keyword">extends</span> <span class="title">MyParent1</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> String str2=<span class="string">"welcome"</span>;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">"child"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>调用1</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 对于静态字段来说，只有定义了该字段的类才会被初始化</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(MyParent1.str);</span><br><span class="line">&#125;</span><br><span class="line">结果为：</span><br><span class="line">parent</span><br><span class="line">Hello</span><br></pre></td></tr></table></figure><p>调用2</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 当一个类在初始化时，要求其父类全部都已经初始化完毕</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> args</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(MyChild.str2);</span><br><span class="line">&#125;</span><br><span class="line">结果为：</span><br><span class="line">parent</span><br><span class="line">child</span><br><span class="line">welcome</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[类初始化介绍]]></title>
+    <url>%2F2019%2F03%2F18%2F%E7%B1%BB%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[所有的Java虚拟机实现必须在每个类或接口被Java程序 “首次主动使用” 时才初始化他们被动使用都不会导致类的初始化 12345678910111213class MyParent1&#123; public static String str="Hello"; static &#123; System.out.println("parent"); &#125;&#125;class MyChild extends MyParent1&#123; public static String str2="welcome"; static &#123; System.out.println("child"); &#125;&#125; 调用1 12345678910/** * 对于静态字段来说，只有定义了该字段的类才会被初始化 * @param args */public static void main(String[] args) &#123; System.out.println(MyParent1.str);&#125;结果为：parentHello 调用2 1234567891011/** * 当一个类在初始化时，要求其父类全部都已经初始化完毕 * @param args */public static void main(String[] args) &#123; System.out.println(MyChild.str2);&#125;结果为：parentchildwelcome]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>jvm符号引用VS间接引用</title>
-      <link href="/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/"/>
-      <url>/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<p><strong>符号引用</strong>就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。<br><a id="more"></a><br><strong>直接引用</strong>就是偏移量，通过偏移量虚拟机可以直接在该类的内存区域中找到方法自己码的起始位置<br><strong>符号引用解析为直接引用</strong>：当第一次运行时，要根据字符串的内容，到该类的方法表中搜索这个方法。运行一次之后，符号引用会被替换为直接引用，下次就不用搜索了，直接使用方法区中的直接引用，这就是类加载过程中的链接中的解析。<br>具体可参考 <a href="https://www.zhihu.com/question/30300585/answer/51335493" target="_blank" rel="noopener">https://www.zhihu.com/question/30300585/answer/51335493</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jvm符号引用VS间接引用]]></title>
+    <url>%2F2019%2F03%2F18%2F%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8%2F</url>
+    <content type="text"><![CDATA[符号引用就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。直接引用就是偏移量，通过偏移量虚拟机可以直接在该类的内存区域中找到方法自己码的起始位置符号引用解析为直接引用：当第一次运行时，要根据字符串的内容，到该类的方法表中搜索这个方法。运行一次之后，符号引用会被替换为直接引用，下次就不用搜索了，直接使用方法区中的直接引用，这就是类加载过程中的链接中的解析。具体可参考 https://www.zhihu.com/question/30300585/answer/51335493]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>mmartinfowler microservices</title>
-      <link href="/2019/03/18/mmartinfowler-microservices/"/>
-      <url>/2019/03/18/mmartinfowler-microservices/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://martinfowler.com/microservices/" target="_blank" rel="noopener">https://martinfowler.com/microservices/</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mmartinfowler microservices]]></title>
+    <url>%2F2019%2F03%2F18%2Fmmartinfowler-microservices%2F</url>
+    <content type="text"><![CDATA[https://martinfowler.com/microservices/]]></content>
       <categories>
-          
-          <category> 每日一译 </category>
-          
+        <category>每日一译</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 微服务 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>sping报错/tmp/tomcat.4296537502689403143.5000/work/Tomcat/localhost/ROOT</title>
-      <link href="/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/"/>
-      <url>/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/</url>
-      
-        <content type="html"><![CDATA[<p>参考<a href="https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat" target="_blank" rel="noopener">https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>微服务</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[sping报错/tmp/tomcat.4296537502689403143.5000/work/Tomcat/localhost/ROOT]]></title>
+    <url>%2F2019%2F03%2F15%2Fsping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT%2F</url>
+    <content type="text"><![CDATA[参考https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat]]></content>
       <categories>
-          
-          <category> （未完成）spring-boot问题 </category>
-          
+        <category>（未完成）spring-boot问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> sping-boot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Centos中Python2.x 升级3.x</title>
-      <link href="/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/"/>
-      <url>/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/</url>
-      
-        <content type="html"><![CDATA[<ul><li>查看当前 python 版本</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python --version</span><br><span class="line">python -V</span><br></pre></td></tr></table></figure><a id="more"></a><ul><li>下载最新的 python 版本</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz</span><br></pre></td></tr></table></figure><ul><li>解压</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.2.tgz</span><br></pre></td></tr></table></figure><ul><li>进入解压的 python 文件夹</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> Python-3.5.2/</span><br><span class="line"> ./configure</span><br></pre></td></tr></table></figure><ul><li>可能会报错</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">configure: error: no acceptable C compiler found <span class="keyword">in</span> <span class="variable">$PATH</span></span><br></pre></td></tr></table></figure><ul><li>报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 <a href="/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/">yum 更新</a> )</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install make gcc gcc-c++</span><br></pre></td></tr></table></figure><ul><li>然后再执行</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure</span><br></pre></td></tr></table></figure><ul><li>编译(时间较长)</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure><ul><li>安装</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make  install</span><br></pre></td></tr></table></figure><ul><li>这个时候查看 python 版本的还是 2.x 访问 python3 的版本是 3.x; 查看 python 的链接情况</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> ls -al /usr/bin | grep python</span><br><span class="line">-rwxr-xr-x.  1 root root      11216 12月  1 2015 abrt-action-analyze-python</span><br><span class="line">lrwxrwxrwx.  1 root root          7 8月  30 12:11 python -&gt; python2</span><br><span class="line">lrwxrwxrwx.  1 root root          9 8月  30 12:11 python2 -&gt; python2.7</span><br><span class="line">-rwxr-xr-x.  1 root root       7136 11月 20 2015 python2.7</span><br></pre></td></tr></table></figure><ul><li>将原来的 python 的软链接重命名</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br></pre></td></tr></table></figure><ul><li>将 python 链接至 python3</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/bin/python3 /usr/bin/python</span><br></pre></td></tr></table></figure><p>变为<br><img src="img/f6a97143f25a4971157854be5a0e310.png" alt="f6a97143f25a4971157854be5a0e310.png"></p><ul><li>查看 python 发现已经是 3.x 的版本</li></ul><p>最后会发现 yum 不能使用，由于 yum 引用了 python 需要将 yum 的配置更改</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br><span class="line">vi /usr/libexec/urlgrabber-ext-down</span><br></pre></td></tr></table></figure><p>将 <em>#!/usr/bin/python 改为 #!/usr/bin/python2.7</em> 就好了</p><p>本文参考：<br><a href="https://blog.csdn.net/liang19890820/article/details/51079633" target="_blank" rel="noopener">https://blog.csdn.net/liang19890820/article/details/51079633</a></p>]]></content>
-      
-      
+      <tags>
+        <tag>sping-boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Centos中Python2.x 升级3.x]]></title>
+    <url>%2F2019%2F03%2F11%2FCentos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x%2F</url>
+    <content type="text"><![CDATA[查看当前 python 版本 12python --versionpython -V 下载最新的 python 版本 1wget https://www.python.org/ftp/python/3.5.2/Python-3.x.x.tgz 解压 1tar -zxvf Python-3.7.2.tgz 进入解压的 python 文件夹 12cd Python-3.5.2/ ./configure 可能会报错 1configure: error: no acceptable C compiler found in $PATH 报错是由于 linux 没有合适的编译器，安装编译器即可( yum 如果有问题可以参考 yum 更新 ) 1yum install make gcc gcc-c++ 然后再执行 1./configure 编译(时间较长) 1make 安装 1make install 这个时候查看 python 版本的还是 2.x 访问 python3 的版本是 3.x; 查看 python 的链接情况 12345 ls -al /usr/bin | grep python-rwxr-xr-x. 1 root root 11216 12月 1 2015 abrt-action-analyze-pythonlrwxrwxrwx. 1 root root 7 8月 30 12:11 python -&gt; python2lrwxrwxrwx. 1 root root 9 8月 30 12:11 python2 -&gt; python2.7-rwxr-xr-x. 1 root root 7136 11月 20 2015 python2.7 将原来的 python 的软链接重命名 1mv /usr/bin/python /usr/bin/python.bak 将 python 链接至 python3 1ln -s /usr/local/bin/python3 /usr/bin/python 变为 查看 python 发现已经是 3.x 的版本 最后会发现 yum 不能使用，由于 yum 引用了 python 需要将 yum 的配置更改 12vi /usr/bin/yumvi /usr/libexec/urlgrabber-ext-down 将 #!/usr/bin/python 改为 #!/usr/bin/python2.7 就好了 本文参考：https://blog.csdn.net/liang19890820/article/details/51079633]]></content>
       <categories>
-          
-          <category> 环境问题 </category>
-          
+        <category>环境问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> centos </tag>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mac环境中在 PyCharm 中部署 Anaconda</title>
-      <link href="/2019/03/10/Mac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda/"/>
-      <url>/2019/03/10/Mac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda/</url>
-      
-        <content type="html"><![CDATA[<p>mac中安装pycharm并通过Anaconda管理python包<br><a id="more"></a><br>1.Pycharm-&gt;Preferences<img src="img/进入属性.png" alt="进入属性"><br>2.Project:项目名-&gt;Project Interpreter-&gt;点击右上角的齿轮<img src="img/Project Interpreter.png" alt="Project Interpreter"> 3.点击齿轮-&gt;Add<img src="img/添加环境.png" alt="添加环境"> 4.选择 System Interpreter-&gt;选择…<img src="img/System Interpreter.png" alt="选择System Interpreter"> 5.选择 Anaconda 路径中的 python 确定<img src="img/选择python环境.png" alt="选择python环境"></p>]]></content>
-      
-      
+      <tags>
+        <tag>centos</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac环境中在 PyCharm 中部署 Anaconda]]></title>
+    <url>%2F2019%2F03%2F10%2FMac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda%2F</url>
+    <content type="text"><![CDATA[mac中安装pycharm并通过Anaconda管理python包1.Pycharm-&gt;Preferences2.Project:项目名-&gt;Project Interpreter-&gt;点击右上角的齿轮 3.点击齿轮-&gt;Add 4.选择 System Interpreter-&gt;选择… 5.选择 Anaconda 路径中的 python 确定]]></content>
       <categories>
-          
-          <category> 环境问题 </category>
-          
+        <category>环境问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MAC </tag>
-            
-            <tag> PyCharm </tag>
-            
-            <tag> Anaconda </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>PyCharm不能编辑</title>
-      <link href="/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/"/>
-      <url>/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/</url>
-      
-        <content type="html"><![CDATA[<p>是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator<br><a id="more"></a><br><code>Tools -&gt; Vim Emulator</code><br><img src="img/img.png" alt="修改图片"></p>]]></content>
-      
-      
+      <tags>
+        <tag>MAC</tag>
+        <tag>PyCharm</tag>
+        <tag>Anaconda</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PyCharm不能编辑]]></title>
+    <url>%2F2019%2F03%2F10%2FPyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91%2F</url>
+    <content type="text"><![CDATA[是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim EmulatorTools -&gt; Vim Emulator]]></content>
       <categories>
-          
-          <category> 环境问题 </category>
-          
+        <category>环境问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MAC </tag>
-            
-            <tag> PyCharm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Mac 中添加 Docker 的国内镜像</title>
-      <link href="/2019/03/10/Mac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/"/>
-      <url>/2019/03/10/Mac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/</url>
-      
-        <content type="html"><![CDATA[<ol><li>点击 Docker 设置</li></ol><a id="more"></a><p><img src="img/Docker.png" alt="Docker"></p><ol start="2"><li>Preferences-&gt;Daemon<br><img src="img/添加样式.png" alt="添加样式"></li></ol><p><strong>注：</strong><br>添加过程中如果出现 No certs for xxx.mirror.aliyuncs.com，可以将 Registry mirrors中的https改为http，然后Apply &amp; Restart就没有这个报错了<br> <img src="img/no certs error.png" alt="no certs error"></p>]]></content>
-      
-      
+      <tags>
+        <tag>MAC</tag>
+        <tag>PyCharm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac 中添加 Docker 的国内镜像]]></title>
+    <url>%2F2019%2F03%2F10%2FMac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F%2F</url>
+    <content type="text"><![CDATA[点击 Docker 设置 Preferences-&gt;Daemon 注：添加过程中如果出现 No certs for xxx.mirror.aliyuncs.com，可以将 Registry mirrors中的https改为http，然后Apply &amp; Restart就没有这个报错了]]></content>
       <categories>
-          
-          <category> docker </category>
-          
+        <category>docker</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-            <tag> MAC </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>springboot 连接数据库报错（useSSl）</title>
-      <link href="/2019/03/10/springboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-      <url>/2019/03/10/springboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-      
-        <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WARN: Establishing SSL connection without server<span class="string">'s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn'</span>t <span class="built_in">set</span>. For compliance with existing applications not using SSL the verifyServerCertificate property is <span class="built_in">set</span> to <span class="string">'false'</span>. You need either to explicitly <span class="built_in">disable</span> SSL by setting useSSL=<span class="literal">false</span>, or <span class="built_in">set</span> useSSL=<span class="literal">true</span> and provide truststore <span class="keyword">for</span> server certificate verification.</span><br></pre></td></tr></table></figure><a id="more"></a><p>由于使用 ssl 连接，但是没配置 ssl 信息；如果不用 ssl 连接可以在连接中增加</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jdbc.url=jdbc:mysql://localhost:3306/esps?useSSL=<span class="literal">false</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>docker</tag>
+        <tag>MAC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[springboot 连接数据库报错（useSSl）]]></title>
+    <url>%2F2019%2F03%2F10%2Fspringboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[1WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification. 由于使用 ssl 连接，但是没配置 ssl 信息；如果不用 ssl 连接可以在连接中增加 1jdbc.url=jdbc:mysql://localhost:3306/esps?useSSL=false]]></content>
       <categories>
-          
-          <category> spring-boot问题 </category>
-          
+        <category>spring-boot问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> spring-boot-data </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Spring 中获取时间相差八个小时解决</title>
-      <link href="/2019/03/10/Spring-%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9B%B8%E5%B7%AE%E5%85%AB%E4%B8%AA%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3/"/>
-      <url>/2019/03/10/Spring-%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9B%B8%E5%B7%AE%E5%85%AB%E4%B8%AA%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3/</url>
-      
-        <content type="html"><![CDATA[<h1 id="获取时间与真实时间相差八小时问题"><a href="#获取时间与真实时间相差八小时问题" class="headerlink" title="获取时间与真实时间相差八小时问题"></a>获取时间与真实时间相差八小时问题</h1><h2 id="问题-1："><a href="#问题-1：" class="headerlink" title="问题 1："></a>问题 1：</h2><p>spring 时间<strong>格式化转换</strong>之后与当前时间相差八个小时</p><a id="more"></a><h3 id="原因："><a href="#原因：" class="headerlink" title="原因："></a>原因：</h3><p>spring 默认使用 jackson 转换日期， jackson 默认时区与北京时间相差八个小时</p><h3 id="解决方式"><a href="#解决方式" class="headerlink" title="解决方式"></a>解决方式</h3><p>在项目的配置文件 <em>application.properties</em> 加上下面配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.jackson.time-zone=GMT+8</span><br></pre></td></tr></table></figure><p>==============================================</p><h2 id="问题-2："><a href="#问题-2：" class="headerlink" title="问题 2："></a>问题 2：</h2><p>数据库获取时间与当前时间相差八个小时（使用的持久层框架为 spring-boot-jpa ）</p><h3 id="原因-2："><a href="#原因-2：" class="headerlink" title="原因 2："></a>原因 2：</h3><p>数据库获取的时间与北京时区存在差异</p><h3 id="解决方式-2"><a href="#解决方式-2" class="headerlink" title="解决方式 2"></a>解决方式 2</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring.datasource.url=jdbc:mysql://IP:3306/database?useUnicode=<span class="literal">true</span>&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2b8</span><br></pre></td></tr></table></figure><p><em>注：<br>建议将两种方式都应用到项目中，以防万一</em></p>]]></content>
-      
-      
+      <tags>
+        <tag>spring-boot-data</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring 中获取时间相差八个小时解决]]></title>
+    <url>%2F2019%2F03%2F10%2FSpring-%E4%B8%AD%E8%8E%B7%E5%8F%96%E6%97%B6%E9%97%B4%E7%9B%B8%E5%B7%AE%E5%85%AB%E4%B8%AA%E5%B0%8F%E6%97%B6%E8%A7%A3%E5%86%B3%2F</url>
+    <content type="text"><![CDATA[获取时间与真实时间相差八小时问题问题 1：spring 时间格式化转换之后与当前时间相差八个小时 原因：spring 默认使用 jackson 转换日期， jackson 默认时区与北京时间相差八个小时 解决方式在项目的配置文件 application.properties 加上下面配置 1spring.jackson.time-zone=GMT+8 ============================================== 问题 2：数据库获取时间与当前时间相差八个小时（使用的持久层框架为 spring-boot-jpa ） 原因 2：数据库获取的时间与北京时区存在差异 解决方式 21spring.datasource.url=jdbc:mysql://IP:3306/database?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=GMT%2b8 注：建议将两种方式都应用到项目中，以防万一]]></content>
       <categories>
-          
-          <category> spring-boot问题 </category>
-          
+        <category>spring-boot问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> spring-boot </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>spring-boot-jpa使用IDEA生成实体类</title>
-      <link href="/2019/03/10/spring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/"/>
-      <url>/2019/03/10/spring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB/</url>
-      
-        <content type="html"><![CDATA[<ol><li><p>View-&gt;Tool Windows-&gt;DataBase 添加数据库<a id="more"></a></p></li><li><p>File-&gt;Project Structure 如果没有点击加号加上 model <img src="img/Project Structure图片.png" alt="Project Structure图片"></p></li><li>添加完成后就会出现 Persistence 窗口(只有执行第二步之后才会出现)<img src="img/Persistence位置.png" alt="Persistence位置.png"></li><li>在 Persistence 窗口 右键选择-&gt;Generate Persistence Mapping-&gt;选择 By Database Schemas<img src="img/Database Schemas.png" alt="Database Schemas"></li><li>选择第 4 步的 By Database Schema 之后就会出现下面的样式选择相应的数据库表、设置表中字段与实体类的对应关系类型、以及生成的实体类所在包的位置，点击确定后就会在相应的位置生成文件<img src="img/选择数据文件.png" alt="选择数据文件"></li></ol>]]></content>
-      
-      
+      <tags>
+        <tag>spring-boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[spring-boot-jpa使用IDEA生成实体类]]></title>
+    <url>%2F2019%2F03%2F10%2Fspring-boot-jpa%E4%BD%BF%E7%94%A8IDEA%E7%94%9F%E6%88%90%E5%AE%9E%E4%BD%93%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[View-&gt;Tool Windows-&gt;DataBase 添加数据库 File-&gt;Project Structure 如果没有点击加号加上 model 添加完成后就会出现 Persistence 窗口(只有执行第二步之后才会出现) 在 Persistence 窗口 右键选择-&gt;Generate Persistence Mapping-&gt;选择 By Database Schemas 选择第 4 步的 By Database Schema 之后就会出现下面的样式选择相应的数据库表、设置表中字段与实体类的对应关系类型、以及生成的实体类所在包的位置，点击确定后就会在相应的位置生成文件]]></content>
       <categories>
-          
-          <category> spring-boot问题 </category>
-          
+        <category>spring-boot问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> IDEA </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Docker设置内部时间为东八区</title>
-      <link href="/2019/03/10/Docker%E8%AE%BE%E7%BD%AE%E5%86%85%E9%83%A8%E6%97%B6%E9%97%B4%E4%B8%BA%E4%B8%9C%E5%85%AB%E5%8C%BA/"/>
-      <url>/2019/03/10/Docker%E8%AE%BE%E7%BD%AE%E5%86%85%E9%83%A8%E6%97%B6%E9%97%B4%E4%B8%BA%E4%B8%9C%E5%85%AB%E5%8C%BA/</url>
-      
-        <content type="html"><![CDATA[<p>在 Dockerfile 或者 Docker Compose 中加入</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \</span><br><span class="line">    &amp;&amp; <span class="built_in">echo</span> <span class="string">'Asia/Shanghai'</span> &gt;/etc/timezone</span><br></pre></td></tr></table></figure><a id="more"></a>]]></content>
-      
-      
+      <tags>
+        <tag>IDEA</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Docker设置内部时间为东八区]]></title>
+    <url>%2F2019%2F03%2F10%2FDocker%E8%AE%BE%E7%BD%AE%E5%86%85%E9%83%A8%E6%97%B6%E9%97%B4%E4%B8%BA%E4%B8%9C%E5%85%AB%E5%8C%BA%2F</url>
+    <content type="text"><![CDATA[在 Dockerfile 或者 Docker Compose 中加入 12RUN /bin/cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \ &amp;&amp; echo 'Asia/Shanghai' &gt;/etc/timezone]]></content>
       <categories>
-          
-          <category> docker </category>
-          
+        <category>docker</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> docker </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>最小化 Centos7 安装没有 ifconfig命令，以及更新 yum</title>
-      <link href="/2019/03/10/%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum/"/>
-      <url>/2019/03/10/%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum/</url>
-      
-        <content type="html"><![CDATA[<p>安装 net 工具</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install net-tools</span><br></pre></td></tr></table></figure><a id="more"></a><p>安装过程中可能会报 yum 异常，可以更改 yum 源<br>可以参考 163 的源网站 <a href="http://mirrors.163.com/.help/centos.html" target="_blank" rel="noopener">http://mirrors.163.com/.help/centos.html</a></p><p>1.备份</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span><br></pre></td></tr></table></figure><p>2.下载相应镜像到指定目录中</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/yum.repos.d/</span><br><span class="line">wget http://mirrors.163.com/.<span class="built_in">help</span>/CentOS7-Base-163.repo</span><br></pre></td></tr></table></figure><p>3.生成缓存</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[最小化 Centos7 安装没有 ifconfig命令，以及更新 yum]]></title>
+    <url>%2F2019%2F03%2F10%2F%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum%2F</url>
+    <content type="text"><![CDATA[安装 net 工具 1yum install net-tools 安装过程中可能会报 yum 异常，可以更改 yum 源可以参考 163 的源网站 http://mirrors.163.com/.help/centos.html 1.备份 1mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup 2.下载相应镜像到指定目录中 12cd /etc/yum.repos.d/wget http://mirrors.163.com/.help/CentOS7-Base-163.repo 3.生成缓存 12yum clean allyum makecache]]></content>
       <categories>
-          
-          <category> 环境问题 </category>
-          
+        <category>环境问题</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> centos </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>1.类加载过程简单介绍</title>
-      <link href="/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/"/>
-      <url>/2019/03/10/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D/</url>
-      
-        <content type="html"><![CDATA[<h1 id="类加载器解析以及阶段分解"><a href="#类加载器解析以及阶段分解" class="headerlink" title="类加载器解析以及阶段分解"></a>类加载器解析以及阶段分解</h1><p>java_<strong>类型</strong>_（不涉及对象）加载、连接和初始化都是在<strong>程序运行期间</strong>完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理）</p><p>用来加载类的工具就是类加载器</p><a id="more"></a><h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h2><p><img src="img/流程.png" alt="详细流程图"></p><h3 id="1-加载："><a href="#1-加载：" class="headerlink" title="1. 加载："></a>1. <a href="/2019/03/18/JVM类的加载/"><strong>加载</strong></a>：</h3><pre><code>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在**运行时数据区的方法区**内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构</code></pre><h3 id="2-连接："><a href="#2-连接：" class="headerlink" title="2. 连接："></a>2. 连接：</h3><pre><code>* 验证：确保类加载的正确性* 准备：为类的静态变量分配内存，并初始化默认值（静态变量只分配这一次内存）* 解析：符号引用解析为直接引用</code></pre><p><a href="/2019/03/18/符号引用VS间接引用/">符号引用与直接引用介绍</a></p><h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. <a href="/2019/03/18/类初始化介绍/">初始化</a></h3><pre><code>类的静态变量赋予正确初始值</code></pre><h3 id="4-开发过程中类的使用："><a href="#4-开发过程中类的使用：" class="headerlink" title="4. 开发过程中类的使用："></a>4. 开发过程中类的使用：</h3><pre><code>调用类得相应的方法，开发者最常参与的过程</code></pre><h3 id="5-类的卸载："><a href="#5-类的卸载：" class="headerlink" title="5. 类的卸载："></a>5. 类的卸载：</h3><pre><code>内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型   已经不存在了，想要使用需要重新加载。例如：osgi）</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  public static int a=1;</span><br><span class="line"></span><br><span class="line">1. 静态变量a分配内存，初始化默认值为_**0**_</span><br><span class="line">2. 在初始化过程中，为a赋值为1</span><br></pre></td></tr></table></figure><p><code>**注： **   类加载过程，总体是按照顺序，但并不是严格按照顺序进行的。比如：在加载过程中可能会执行初始化中的某些处理。</code></p><h2 id="JVM结束生命周期的方法"><a href="#JVM结束生命周期的方法" class="headerlink" title="JVM结束生命周期的方法"></a>JVM结束生命周期的方法</h2><ul><li><p>System.exit();</p></li><li><p>程序正常结束</p></li><li><p>遇到异常或者错误，异常终止</p></li><li><p>操作系统错误而导致（开发者不可控的因素）</p></li></ul>]]></content>
-      
-      
+      <tags>
+        <tag>centos</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[1.类加载过程简单介绍]]></title>
+    <url>%2F2019%2F03%2F10%2F%E7%B1%BB%E5%8A%A0%E8%BD%BD%E8%BF%87%E7%A8%8B%E7%AE%80%E5%8D%95%E4%BB%8B%E7%BB%8D%2F</url>
+    <content type="text"><![CDATA[类加载器解析以及阶段分解java_类型_（不涉及对象）加载、连接和初始化都是在程序运行期间完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理） 用来加载类的工具就是类加载器 类加载的过程 1. 加载：类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在**运行时数据区的方法区**内， 然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中） 用来封装类在方法区内的数据结构 2. 连接：* 验证：确保类加载的正确性 * 准备：为类的静态变量分配内存，并初始化默认值（静态变量只分配这一次内存） * 解析：符号引用解析为直接引用 符号引用与直接引用介绍 3. 初始化类的静态变量赋予正确初始值 4. 开发过程中类的使用：调用类得相应的方法，开发者最常参与的过程 5. 类的卸载：内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型 已经不存在了，想要使用需要重新加载。例如：osgi） 12345 public static int a=1;1. 静态变量a分配内存，初始化默认值为_**0**_2. 在初始化过程中，为a赋值为1 **注： ** 类加载过程，总体是按照顺序，但并不是严格按照顺序进行的。比如：在加载过程中可能会执行初始化中的某些处理。 JVM结束生命周期的方法 System.exit(); 程序正常结束 遇到异常或者错误，异常终止 操作系统错误而导致（开发者不可控的因素）]]></content>
       <categories>
-          
-          <category> JVM学习 </category>
-          
+        <category>JVM学习</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> jvm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
-    
-    
-    <entry>
-      <title></title>
-      <link href="/README.html"/>
-      <url>/README.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="hexo博客"><a href="#hexo博客" class="headerlink" title="hexo博客"></a>hexo博客</h1>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-    </entry>
-    
-    
-  
+      <tags>
+        <tag>jvm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title></title>
+    <url>%2FREADME.html</url>
+    <content type="text"><![CDATA[hexo博客]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
+    <content type="text"></content>
+  </entry>
 </search>
