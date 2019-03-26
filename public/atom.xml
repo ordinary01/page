@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2019-03-22T15:56:54.700Z</updated>
+  <updated>2019-03-26T14:30:10.060Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开发过程中单个字母命名造成错误</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/26/%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8D%95%E4%B8%AA%E5%AD%97%E6%AF%8D%E5%91%BD%E5%90%8D%E9%80%A0%E6%88%90%E9%94%99%E8%AF%AF/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/26/开发过程中单个字母命名造成错误/</id>
+    <published>2019-03-26T14:22:10.000Z</published>
+    <updated>2019-03-26T14:30:10.060Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;开发过程中数据库中的字段名是e_calss_hours生成的类对应的字段为eCalssHours，IDE自动生成的&lt;br&gt;getter和setter方法就会是getECalssHours();这样就会导致获取字段数据的时候获取的为null，&lt;br&gt;
+    
+    </summary>
+    
+      <category term="开发问题" scheme="https://blog.jiangdashuai.com/categories/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98/"/>
+    
+    
+      <category term="java" scheme="https://blog.jiangdashuai.com/tags/java/"/>
+    
+      <category term="开发" scheme="https://blog.jiangdashuai.com/tags/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title>虚拟机参数</title>
@@ -163,11 +185,11 @@
   </entry>
   
   <entry>
-    <title>mmartinfowler microservices</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/18/mmartinfowler-microservices/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/18/mmartinfowler-microservices/</id>
+    <title>Microservices Resource Guide（未完成）</title>
+    <link href="https://blog.jiangdashuai.com/2019/03/18/Microservices%20Resource%20Guide/"/>
+    <id>https://blog.jiangdashuai.com/2019/03/18/Microservices Resource Guide/</id>
     <published>2019-03-18T14:15:32.000Z</published>
-    <updated>2019-03-18T14:16:21.075Z</updated>
+    <updated>2019-03-26T15:30:13.537Z</updated>
     
     <summary type="html">
     
@@ -175,7 +197,7 @@
       
         
         
-          &lt;p&gt;&lt;a href=&quot;https://martinfowler.com/microservices/&quot; target=&quot;_blank&quot;
+          &lt;p&gt;翻译文章：&lt;a href=&quot;https://martinfowler.com/microservices/&quot; target=&quot;_blank&quot;
         
       
     

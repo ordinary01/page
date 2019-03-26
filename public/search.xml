@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[开发过程中单个字母命名造成错误]]></title>
+    <url>%2F2019%2F03%2F26%2F%E5%BC%80%E5%8F%91%E8%BF%87%E7%A8%8B%E4%B8%AD%E5%8D%95%E4%B8%AA%E5%AD%97%E6%AF%8D%E5%91%BD%E5%90%8D%E9%80%A0%E6%88%90%E9%94%99%E8%AF%AF%2F</url>
+    <content type="text"><![CDATA[开发过程中数据库中的字段名是e_calss_hours生成的类对应的字段为eCalssHours，IDE自动生成的getter和setter方法就会是getECalssHours();这样就会导致获取字段数据的时候获取的为null，所以需要自己手动设置为geteCalssHours();才会获取到具体的字段建议无论是数据库字段还是实体类的变量尽量都不要设置为带字母开头的 1234567891011121314151617181920@Data@ToStringpublic class TRClassEntity &#123; private String operId; private Integer cCalssHours; private Integer eCalssHours; private Integer oCalssHours; private String classType; private Integer classHoursLeft; public Integer geteCalssHours() &#123; return eCalssHours; &#125; public void seteCalssHours(Integer eCalssHours) &#123; this.eCalssHours = eCalssHours; &#125;&#125;]]></content>
+      <categories>
+        <category>开发问题</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[虚拟机参数]]></title>
     <url>%2F2019%2F03%2F22%2F%E8%99%9A%E6%8B%9F%E6%9C%BA%E5%8F%82%E6%95%B0%2F</url>
     <content type="text"><![CDATA[虚拟机参数JVM参数规则所有的JVM参数都是以 -XX：开头-XX:+option ，表示开启option选项-XX:-option ，表示关闭option选项-XX：option=value ，表示将option选项的值设置为value 常用参数：-XX：+TraceClassLoading，用于追踪类的加载信息并打印-XX: +TaceClassUnloading，用户追踪累的卸载信息并打印 配置方法以IDEA为例]]></content>
@@ -78,9 +90,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[mmartinfowler microservices]]></title>
-    <url>%2F2019%2F03%2F18%2Fmmartinfowler-microservices%2F</url>
-    <content type="text"><![CDATA[https://martinfowler.com/microservices/]]></content>
+    <title><![CDATA[Microservices Resource Guide（未完成）]]></title>
+    <url>%2F2019%2F03%2F18%2FMicroservices%20Resource%20Guide%2F</url>
+    <content type="text"><![CDATA[翻译文章：https://martinfowler.com/microservices/ 微服务资源指南“微服务”成为一个热门的术语是在2014年，作为结构化应用的一个新的思考方向吸引了大量的注意力。我在几年前遇到了这种风格，与我的朋友在 ThoughtWorks内外进行了交流。许多优秀的开发者发现这种风格的服务要想有效的进行工作需要伴随着有着大量分类的系统。但是要想从微服务的 思考中获益，你还必须知道，什么是微服务，怎样做，以及为什么要这么做。 这个指南能帮助我们获取更多的微服务资源。包含个人选择的文章，视频，书籍以及博客能够教你跟多关于微服务架构风格。这些选择（selection） 能指导你在martinfowler.com上找到你想要的材料，但是网站上也有需要其他我认为有用的材料。我没有尝试去做一个全面的列表（只是从其他几个地方 选择了几个介绍的talk）但这是我建议，你应该从这里开始探索。 什么是微服务什么时候我们应该使用微服务怎样去构建微服务谁在使用微服务]]></content>
       <categories>
         <category>每日一译</category>
       </categories>
