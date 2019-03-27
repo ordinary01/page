@@ -90,7 +90,7 @@
 <meta property="og:description" content="类加载器解析以及阶段分解java_类型_（不涉及对象）加载、连接和初始化都是在程序运行期间完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理） 用来加载类的工具就是类加载器">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://blog.jiangdashuai.com/2019/03/10/类加载过程简单介绍/img/流程.png">
-<meta property="og:updated_time" content="2019-03-25T01:57:40.684Z">
+<meta property="og:updated_time" content="2019-03-22T16:23:05.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.类加载过程简单介绍">
 <meta name="twitter:description" content="类加载器解析以及阶段分解java_类型_（不涉及对象）加载、连接和初始化都是在程序运行期间完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理） 用来加载类的工具就是类加载器">
@@ -344,8 +344,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-03-25T09:57:40+08:00">
-                2019-03-25
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-23T00:23:05+08:00">
+                2019-03-23
               </time>
             
           </span>
@@ -375,6 +375,16 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/10/类加载过程简单介绍/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/10/类加载过程简单介绍/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -847,6 +857,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5Jz23oIWCHoviS033ljYAG1F-gzGzoHsz',
+        appKey: 'btBfScCVNc44LKOEqXRJatbF',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

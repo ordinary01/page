@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="记录成长">
 <meta property="og:description" content="敬胜怠,义胜欲。知其雄,守其雌">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-20T02:02:54.566Z">
+<meta property="og:updated_time" content="2019-03-19T16:36:06.086Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="categories">
 <meta name="twitter:description" content="敬胜怠,义胜欲。知其雄,守其雌">
@@ -643,6 +643,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '5Jz23oIWCHoviS033ljYAG1F-gzGzoHsz',
+        appKey: 'btBfScCVNc44LKOEqXRJatbF',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 
