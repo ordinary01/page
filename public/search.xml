@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[node测试时使用nodemon]]></title>
+    <url>%2F2020%2F06%2F27%2Fnode%E6%B5%8B%E8%AF%95%E6%97%B6%E4%BD%BF%E7%94%A8nodemon%2F</url>
+    <content type="text"><![CDATA[在进行node进行开发过程中如果更改代码需要频繁重启可是使用nodemon来解决增加开发效率 安装 1npm i -g nodemon 启动项目 1nodemon index.js]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nodejs简单页面展示]]></title>
+    <url>%2F2020%2F06%2F27%2Fnodejs%E7%AE%80%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA%2F</url>
+    <content type="text"><![CDATA[1234567891011121314151617181920const koa=require(&apos;koa&apos;);const fs =require(&apos;fs&apos;);const mount=require(&apos;koa-mount&apos;);const static=require(&apos;koa-static&apos;);const app=new koa();//将静态资源开放，否则相应的静态资源会失效app.use( static(__dirname+&apos;/source/&apos;))//设置请求路径为&quot;/&quot; 的操作逻辑app.use( mount(&apos;/&apos;,async(ctx)=&gt;&#123; ctx.body=fs.readFileSync(__dirname+&apos;/source/index.htm&apos;,&apos;utf-8&apos;) &#125;))//设置端口app.listen(3000)]]></content>
+      <categories>
+        <category>node</category>
+      </categories>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[docker修改镜像名称]]></title>
     <url>%2F2020%2F06%2F27%2Fdocker%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E5%90%8D%E7%A7%B0%2F</url>
     <content type="text"><![CDATA[12345[root@localhost ~]# docker imagesREPOSITORY TAG IMAGE ID CREATED SIZEpujh/centos tomcat-centos 70ff7873d7cd About an hour ago 612 MBdocker.io/centos latest 9f38484d220f 11 days ago 202 MB[root@localhost ~]# docker tag 70ff7873d7cd my_centos:tomcat-centos]]></content>
@@ -254,13 +276,13 @@
     <content type="text"><![CDATA[hexo博客]]></content>
   </entry>
   <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
