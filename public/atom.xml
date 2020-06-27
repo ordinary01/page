@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2019-04-01T03:16:34.564Z</updated>
+  <updated>2020-06-27T11:22:16.363Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker修改镜像名称</title>
+    <link href="https://blog.jiangdashuai.com/2020/06/27/docker%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E5%90%8D%E7%A7%B0/"/>
+    <id>https://blog.jiangdashuai.com/2020/06/27/docker修改镜像名称/</id>
+    <published>2020-06-27T11:21:15.000Z</published>
+    <updated>2020-06-27T11:22:16.363Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>Window关闭端口</title>
@@ -429,27 +455,6 @@
     
     
       <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最小化 Centos7 安装没有 ifconfig命令，以及更新 yum</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/10/%E6%9C%80%E5%B0%8F%E5%8C%96-Centos7-%E5%AE%89%E8%A3%85%E6%B2%A1%E6%9C%89-ifconfig%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A%E6%9B%B4%E6%96%B0-yum/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/10/最小化-Centos7-安装没有-ifconfig命令，以及更新-yum/</id>
-    <published>2019-03-10T15:02:48.000Z</published>
-    <updated>2019-03-19T17:33:00.625Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;安装 net 工具&lt;/p&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;yum install net-tools&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="环境问题" scheme="https://blog.jiangdashuai.com/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="centos" scheme="https://blog.jiangdashuai.com/tags/centos/"/>
     
   </entry>
   

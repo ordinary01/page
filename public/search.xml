@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[docker修改镜像名称]]></title>
+    <url>%2F2020%2F06%2F27%2Fdocker%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E5%90%8D%E7%A7%B0%2F</url>
+    <content type="text"><![CDATA[12345[root@localhost ~]# docker imagesREPOSITORY TAG IMAGE ID CREATED SIZEpujh/centos tomcat-centos 70ff7873d7cd About an hour ago 612 MBdocker.io/centos latest 9f38484d220f 11 days ago 202 MB[root@localhost ~]# docker tag 70ff7873d7cd my_centos:tomcat-centos]]></content>
+      <categories>
+        <category>docker</category>
+      </categories>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Window关闭端口]]></title>
     <url>%2F2019%2F04%2F01%2FWindow%E5%85%B3%E9%97%AD%E7%AB%AF%E5%8F%A3%2F</url>
     <content type="text"><![CDATA[查询端口占用进程号 1netstat -aon| findstr &quot;8083&quot; 终止进程 1taskkill /F /PID 7264]]></content>
@@ -243,13 +254,13 @@
     <content type="text"><![CDATA[hexo博客]]></content>
   </entry>
   <entry>
-    <title><![CDATA[tags]]></title>
-    <url>%2Ftags%2Findex.html</url>
+    <title><![CDATA[categories]]></title>
+    <url>%2Fcategories%2Findex.html</url>
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[categories]]></title>
-    <url>%2Fcategories%2Findex.html</url>
+    <title><![CDATA[tags]]></title>
+    <url>%2Ftags%2Findex.html</url>
     <content type="text"></content>
   </entry>
 </search>
