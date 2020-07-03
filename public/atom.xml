@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-03T06:57:55.481Z</updated>
+  <updated>2020-07-03T07:14:28.334Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>node使用sharp修改图片中间原型头像</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/03/node%E4%BD%BF%E7%94%A8sharp%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%E4%B8%AD%E9%97%B4%E5%8E%9F%E5%9E%8B%E5%A4%B4%E5%83%8F/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/03/node使用sharp修改图片中间原型头像/</id>
+    <published>2020-07-03T07:07:55.000Z</published>
+    <updated>2020-07-03T07:14:28.334Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;需要将网络上的图片，中间的头像更改为新图片，并且返回生成图片的文件流&lt;br&gt;
+    
+    </summary>
+    
+      <category term="node学习" scheme="https://blog.jiangdashuai.com/categories/node%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="node" scheme="https://blog.jiangdashuai.com/tags/node/"/>
+    
+  </entry>
   
   <entry>
     <title>vscode安装golang插件失败问题</title>
@@ -69,21 +89,15 @@
     <link href="https://blog.jiangdashuai.com/2020/06/27/nodejs%E7%AE%80%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%B1%95%E7%A4%BA/"/>
     <id>https://blog.jiangdashuai.com/2020/06/27/nodejs简单页面展示/</id>
     <published>2020-06-27T14:02:48.000Z</published>
-    <updated>2020-07-03T06:43:42.762Z</updated>
+    <updated>2020-07-03T07:14:24.376Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
+      &lt;p&gt;制作简单的网页服务器&lt;br&gt;
     
     </summary>
     
-      <category term="node" scheme="https://blog.jiangdashuai.com/categories/node/"/>
+      <category term="node学习" scheme="https://blog.jiangdashuai.com/categories/node%E5%AD%A6%E4%B9%A0/"/>
     
     
       <category term="node" scheme="https://blog.jiangdashuai.com/tags/node/"/>
@@ -447,26 +461,6 @@
       <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
     
       <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>springboot 连接数据库报错（useSSl）</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/10/springboot-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/10/springboot-连接数据库/</id>
-    <published>2019-03-10T15:50:16.000Z</published>
-    <updated>2020-07-03T06:43:42.770Z</updated>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;WARN: Establishing SSL connection without server&lt;span class=&quot;string&quot;&gt;&#39;s identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn&#39;&lt;/span&gt;t &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt;. For compliance with existing applications not using SSL the verifyServerCertificate property is &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; to &lt;span class=&quot;string&quot;&gt;&#39;false&#39;&lt;/span&gt;. You need either to explicitly &lt;span class=&quot;built_in&quot;&gt;disable&lt;/span&gt; SSL by setting useSSL=&lt;span class=&quot;literal&quot;&gt;false&lt;/span&gt;, or &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; useSSL=&lt;span class=&quot;literal&quot;&gt;true&lt;/span&gt; and provide truststore &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; server certificate verification.&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="spring-boot问题" scheme="https://blog.jiangdashuai.com/categories/spring-boot%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="spring-boot-data" scheme="https://blog.jiangdashuai.com/tags/spring-boot-data/"/>
     
   </entry>
   

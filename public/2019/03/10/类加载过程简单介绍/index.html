@@ -90,7 +90,7 @@
 <meta property="og:description" content="类加载器解析以及阶段分解java_类型_（不涉及对象）加载、连接和初始化都是在程序运行期间完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理） 用来加载类的工具就是类加载器">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://blog.jiangdashuai.com/2019/03/10/类加载过程简单介绍/img/流程.png">
-<meta property="og:updated_time" content="2020-07-03T06:43:42.771Z">
+<meta property="og:updated_time" content="2020-07-03T07:08:15.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1.类加载过程简单介绍">
 <meta name="twitter:description" content="类加载器解析以及阶段分解java_类型_（不涉及对象）加载、连接和初始化都是在程序运行期间完成的，这中设计在灵活性上面增加了更多的可能性（例如动态代理） 用来加载类的工具就是类加载器">
@@ -344,7 +344,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-07-03T14:43:42+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2020-07-03T15:08:15+08:00">
                 2020-07-03
               </time>
             
@@ -425,16 +425,16 @@
 <p>用来加载类的工具就是类加载器</p>
 <a id="more"></a>
 <h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a>类加载的过程</h2><p><img src="img/流程.png" alt="详细流程图"></p>
-<h3 id="1-加载："><a href="#1-加载：" class="headerlink" title="1. 加载："></a>1. <a href="/2019/03/18/JVM类的加载/"><strong>加载</strong></a>：</h3><pre><code>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在**运行时数据区的方法区**内，
+<h3 id="1-加载"><a href="#1-加载" class="headerlink" title="1. 加载"></a>1. <a href="/2019/03/18/JVM类的加载/"><strong>加载</strong></a></h3><pre><code>类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在**运行时数据区的方法区**内，
 然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）
 用来封装类在方法区内的数据结构
-</code></pre><h3 id="2-连接："><a href="#2-连接：" class="headerlink" title="2. 连接："></a>2. 连接：</h3><pre><code>* 验证：确保类加载的正确性
+</code></pre><h3 id="2-连接"><a href="#2-连接" class="headerlink" title="2. 连接"></a>2. 连接</h3><pre><code>* 验证：确保类加载的正确性
 * 准备：为类的静态变量分配内存，并初始化默认值（静态变量只分配这一次内存）
 * 解析：符号引用解析为直接引用
 </code></pre><p><a href="/2019/03/18/符号引用VS间接引用/">符号引用与直接引用介绍</a></p>
 <h3 id="3-初始化"><a href="#3-初始化" class="headerlink" title="3. 初始化"></a>3. <a href="/2019/03/18/类初始化介绍/">初始化</a></h3><pre><code>类的静态变量赋予正确初始值
-</code></pre><h3 id="4-开发过程中类的使用："><a href="#4-开发过程中类的使用：" class="headerlink" title="4. 开发过程中类的使用："></a>4. 开发过程中类的使用：</h3><pre><code>调用类得相应的方法，开发者最常参与的过程
-</code></pre><h3 id="5-类的卸载："><a href="#5-类的卸载：" class="headerlink" title="5. 类的卸载："></a>5. 类的卸载：</h3><pre><code>内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型
+</code></pre><h3 id="4-开发过程中类的使用"><a href="#4-开发过程中类的使用" class="headerlink" title="4. 开发过程中类的使用"></a>4. 开发过程中类的使用</h3><pre><code>调用类得相应的方法，开发者最常参与的过程
+</code></pre><h3 id="5-类的卸载"><a href="#5-类的卸载" class="headerlink" title="5. 类的卸载"></a>5. 类的卸载</h3><pre><code>内存中去掉（卸载完成中之后，类就不能使用和创建了，因为在内存中该类型
    已经不存在了，想要使用需要重新加载。例如：osgi）
 </code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">  public static int a=1;</span><br><span class="line"></span><br><span class="line">1. 静态变量a分配内存，初始化默认值为_**0**_</span><br><span class="line">2. 在初始化过程中，为a赋值为1</span><br></pre></td></tr></table></figure>
 <p><code>**注： **
@@ -576,7 +576,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -587,7 +587,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -638,7 +638,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载器解析以及阶段分解"><span class="nav-number">1.</span> <span class="nav-text">类加载器解析以及阶段分解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载的过程"><span class="nav-number">1.1.</span> <span class="nav-text">类加载的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-加载："><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 加载：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-连接："><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 连接：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-初始化"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-开发过程中类的使用："><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 开发过程中类的使用：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-类的卸载："><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 类的卸载：</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM结束生命周期的方法"><span class="nav-number">1.2.</span> <span class="nav-text">JVM结束生命周期的方法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类加载器解析以及阶段分解"><span class="nav-number">1.</span> <span class="nav-text">类加载器解析以及阶段分解</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载的过程"><span class="nav-number">1.1.</span> <span class="nav-text">类加载的过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-加载"><span class="nav-number">1.1.1.</span> <span class="nav-text">1. 加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-连接"><span class="nav-number">1.1.2.</span> <span class="nav-text">2. 连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-初始化"><span class="nav-number">1.1.3.</span> <span class="nav-text">3. 初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-开发过程中类的使用"><span class="nav-number">1.1.4.</span> <span class="nav-text">4. 开发过程中类的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-类的卸载"><span class="nav-number">1.1.5.</span> <span class="nav-text">5. 类的卸载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JVM结束生命周期的方法"><span class="nav-number">1.2.</span> <span class="nav-text">JVM结束生命周期的方法</span></a></li></ol></li></ol></div>
             
 
           </div>
