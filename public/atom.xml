@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-03T07:14:28.334Z</updated>
+  <updated>2020-07-03T10:03:46.559Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go test创建</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/03/go-test%E5%88%9B%E5%BB%BA/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/03/go-test创建/</id>
+    <published>2020-07-03T09:59:22.000Z</published>
+    <updated>2020-07-03T10:03:46.559Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; try_test&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;testing&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;TestFirstTry&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(t *testing.T)&lt;/span&gt;&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    t.Log(&lt;span class=&quot;string&quot;&gt;&quot;My First Log&quot;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="node学习" scheme="https://blog.jiangdashuai.com/categories/node%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="node" scheme="https://blog.jiangdashuai.com/tags/node/"/>
+    
+  </entry>
   
   <entry>
     <title>node使用sharp修改图片中间原型头像</title>
@@ -437,30 +457,6 @@
       <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
     
       <category term="PyCharm" scheme="https://blog.jiangdashuai.com/tags/PyCharm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 中添加 Docker 的国内镜像</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/10/Mac-%E4%B8%AD%E6%B7%BB%E5%8A%A0-Docker-%E7%9A%84%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/10/Mac-中添加-Docker-的国内镜像/</id>
-    <published>2019-03-10T15:52:10.000Z</published>
-    <updated>2020-07-03T06:43:42.744Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ol&gt;
-&lt;li&gt;点击 Docker 设置&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="docker" scheme="https://blog.jiangdashuai.com/categories/docker/"/>
-    
-    
-      <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
-    
-      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
     
   </entry>
   

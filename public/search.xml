@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>go test创建</title>
+      <link href="/2020/07/03/go-test%E5%88%9B%E5%BB%BA/"/>
+      <url>/2020/07/03/go-test%E5%88%9B%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> try_test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"testing"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestFirstTry</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">    t.Log(<span class="string">"My First Log"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><a id="more"></a><p>vscode需要执行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">go</span> test -v try_test.<span class="keyword">go</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> node学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> node </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>node使用sharp修改图片中间原型头像</title>
       <link href="/2020/07/03/node%E4%BD%BF%E7%94%A8sharp%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%E4%B8%AD%E9%97%B4%E5%8E%9F%E5%9E%8B%E5%A4%B4%E5%83%8F/"/>
       <url>/2020/07/03/node%E4%BD%BF%E7%94%A8sharp%E4%BF%AE%E6%94%B9%E5%9B%BE%E7%89%87%E4%B8%AD%E9%97%B4%E5%8E%9F%E5%9E%8B%E5%A4%B4%E5%83%8F/</url>
