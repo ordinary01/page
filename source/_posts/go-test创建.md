@@ -2,9 +2,9 @@
 title: go test创建
 date: 2020-07-03 17:59:22
 tags:
-  - node
+  - go
 categories:
-  - node学习
+  - go学习
 ---
 
 ```go

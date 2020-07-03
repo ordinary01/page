@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-03T10:03:46.559Z</updated>
+  <updated>2020-07-03T10:05:13.305Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.jiangdashuai.com/2020/07/03/go-test%E5%88%9B%E5%BB%BA/"/>
     <id>https://blog.jiangdashuai.com/2020/07/03/go-test创建/</id>
     <published>2020-07-03T09:59:22.000Z</published>
-    <updated>2020-07-03T10:03:46.559Z</updated>
+    <updated>2020-07-03T10:05:13.305Z</updated>
     
     <summary type="html">
     
@@ -29,10 +29,10 @@
     
     </summary>
     
-      <category term="node学习" scheme="https://blog.jiangdashuai.com/categories/node%E5%AD%A6%E4%B9%A0/"/>
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="node" scheme="https://blog.jiangdashuai.com/tags/node/"/>
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
     
   </entry>
   
