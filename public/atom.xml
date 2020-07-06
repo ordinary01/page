@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-03T10:05:13.305Z</updated>
+  <updated>2020-07-06T08:49:33.197Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go常量定义</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/06/go%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/06/go常量定义/</id>
+    <published>2020-07-06T08:47:21.000Z</published>
+    <updated>2020-07-06T08:49:33.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go变量定义</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/06/go%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/06/go变量定义/</id>
+    <published>2020-07-06T08:32:31.000Z</published>
+    <updated>2020-07-06T08:47:46.080Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;变量的三种定义方式&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title>go test创建</title>
@@ -411,52 +457,6 @@
       <category term="centos" scheme="https://blog.jiangdashuai.com/tags/centos/"/>
     
       <category term="python" scheme="https://blog.jiangdashuai.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac环境中在 PyCharm 中部署 Anaconda</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/10/Mac%E7%8E%AF%E5%A2%83%E4%B8%AD%E5%9C%A8-Pycharm-%E4%B8%AD%E9%83%A8%E7%BD%B2-Anaconda/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/10/Mac环境中在-Pycharm-中部署-Anaconda/</id>
-    <published>2019-03-10T15:57:45.000Z</published>
-    <updated>2020-07-03T06:43:42.750Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;mac中安装pycharm并通过Anaconda管理python包&lt;br&gt;
-    
-    </summary>
-    
-      <category term="环境问题" scheme="https://blog.jiangdashuai.com/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
-    
-      <category term="PyCharm" scheme="https://blog.jiangdashuai.com/tags/PyCharm/"/>
-    
-      <category term="Anaconda" scheme="https://blog.jiangdashuai.com/tags/Anaconda/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PyCharm不能编辑</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/10/PyCharm%E4%B8%8D%E8%83%BD%E7%BC%96%E8%BE%91/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/10/PyCharm不能编辑/</id>
-    <published>2019-03-10T15:55:33.000Z</published>
-    <updated>2020-07-03T06:43:42.758Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;是因为安装的时候安装了 vim 扩展，会默认使用 vim 编辑器来进行编辑，需要手动关闭 Vim Emulator&lt;br&gt;
-    
-    </summary>
-    
-      <category term="环境问题" scheme="https://blog.jiangdashuai.com/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="MAC" scheme="https://blog.jiangdashuai.com/tags/MAC/"/>
-    
-      <category term="PyCharm" scheme="https://blog.jiangdashuai.com/tags/PyCharm/"/>
     
   </entry>
   

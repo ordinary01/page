@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>go常量定义</title>
+      <link href="/2020/07/06/go%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/"/>
+      <url>/2020/07/06/go%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">package</span> constant_test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"testing"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">Monday = <span class="literal">iota</span> + <span class="number">1</span></span><br><span class="line">Tuesday</span><br><span class="line">Wednesday</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">Readable = <span class="number">1</span> &lt;&lt; <span class="literal">iota</span></span><br><span class="line">Writable</span><br><span class="line">Executable</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestConstantTry</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">t.Log(Monday, Wednesday)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> go学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go变量定义</title>
+      <link href="/2020/07/06/go%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89/"/>
+      <url>/2020/07/06/go%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89/</url>
+      
+        <content type="html"><![CDATA[<p>变量的三种定义方式</p><a id="more"></a><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestFibList</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">    <span class="comment">//方式一</span></span><br><span class="line"><span class="comment">// var a int = 1</span></span><br><span class="line"><span class="comment">// var b int = 1</span></span><br><span class="line">    <span class="comment">//方式二</span></span><br><span class="line"><span class="comment">// var (</span></span><br><span class="line"><span class="comment">// a int = 1</span></span><br><span class="line"><span class="comment">// b     = 1</span></span><br><span class="line"><span class="comment">// )</span></span><br><span class="line">    <span class="comment">//方式三</span></span><br><span class="line">a := <span class="number">1</span></span><br><span class="line">b := <span class="number">1</span></span><br><span class="line">t.Log(a)</span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; <span class="number">5</span>; i++ &#123;</span><br><span class="line">t.Log(<span class="string">" "</span>, b)</span><br><span class="line">tmp := a</span><br><span class="line">a = b</span><br><span class="line">b = tmp + a</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>更换两变量值</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestExchange</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">a := <span class="number">1</span></span><br><span class="line">b := <span class="number">2</span></span><br><span class="line">a, b = b, a</span><br><span class="line">t.Log(a, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> go学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>go test创建</title>
       <link href="/2020/07/03/go-test%E5%88%9B%E5%BB%BA/"/>
       <url>/2020/07/03/go-test%E5%88%9B%E5%BB%BA/</url>
