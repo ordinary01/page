@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>记录成长</title>
+  <title>记录</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-06T08:49:33.197Z</updated>
+  <updated>2020-07-07T11:19:34.155Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,66 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go条件与循环</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/07/go%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/07/go条件与循环/</id>
+    <published>2020-07-07T08:27:50.000Z</published>
+    <updated>2020-07-07T11:19:34.155Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍go语言其他语言区别&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go运算符</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/07/go%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/07/go运算符/</id>
+    <published>2020-07-07T08:02:46.000Z</published>
+    <updated>2020-07-07T08:21:21.852Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍go语言运算符与其他语言运算符区别&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>go数据类型</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/06/go%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/06/go数据类型/</id>
+    <published>2020-07-06T09:23:49.000Z</published>
+    <updated>2020-07-07T08:01:51.385Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;与其他主要编程语言的差异&quot;&gt;&lt;a href=&quot;#与其他主要编程语言的差异&quot; class=&quot;headerlink&quot; title=&quot;与其他主要编程语言的差异&quot;&gt;&lt;/a&gt;与其他主要编程语言的差异&lt;/h3&gt;&lt;p&gt;1.Go语言不允许隐式类型转换&lt;br&gt;2.别名和原有类型也不能进行隐式类型转换&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title>go常量定义</title>
@@ -385,78 +445,6 @@
     
     
       <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Microservices Resource Guide（未完成）</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/18/Microservices%20Resource%20Guide/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/18/Microservices Resource Guide/</id>
-    <published>2019-03-18T14:15:32.000Z</published>
-    <updated>2020-07-03T06:43:42.758Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;翻译文章：&lt;a href=&quot;https://martinfowler.com/microservices/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://martinfowler.com/microservices/&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;微服务资源指南&quot;&gt;&lt;a href=&quot;#微服务资源指南&quot; class=&quot;headerlink&quot; title=&quot;微服务资源指南&quot;&gt;&lt;/a&gt;微服务资源指南&lt;/h1&gt;&lt;p&gt;“微服务”成为一个热门的术语是在 2014 年，作为结构化应用的一个新的思考方向吸引了大量的注意力。我在几年前遇到了这种风格，与我的朋友在 ThoughtWorks 内外进行了交流。许多优秀的开发者发现这种风格的服务要想有效的进行工作需要伴随着有着大量分类的系统。但是要想从微服务的思考中获益，你还必须知道，什么是微服务，怎样做，以及为什么要这么做。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="每日一译" scheme="https://blog.jiangdashuai.com/categories/%E6%AF%8F%E6%97%A5%E4%B8%80%E8%AF%91/"/>
-    
-    
-      <category term="微服务" scheme="https://blog.jiangdashuai.com/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>sping报错/tmp/tomcat.4296537502689403143.5000/work/Tomcat/localhost/ROOT</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/15/sping%E6%8A%A5%E9%94%99-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/15/sping报错-tmp-tomcat-4296537502689403143-5000-work-Tomcat-localhost-ROOT/</id>
-    <published>2019-03-15T03:15:31.000Z</published>
-    <updated>2020-07-03T06:43:42.763Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;参考&lt;a href=&quot;https://stackoverflow.com/questions/50523407/the-temporary-upload-location-tmp-tomcat-4296537502689403143-5000-work-tomcat&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="（未完成）spring-boot问题" scheme="https://blog.jiangdashuai.com/categories/%EF%BC%88%E6%9C%AA%E5%AE%8C%E6%88%90%EF%BC%89spring-boot%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="sping-boot" scheme="https://blog.jiangdashuai.com/tags/sping-boot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Centos中Python2.x 升级3.x</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/11/Centos%E4%B8%ADPython2-x-%E5%8D%87%E7%BA%A73-x/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/11/Centos中Python2-x-升级3-x/</id>
-    <published>2019-03-10T16:12:29.000Z</published>
-    <updated>2020-07-03T06:43:42.743Z</updated>
-    
-    <summary type="html">
-    
-      &lt;ul&gt;
-&lt;li&gt;查看当前 python 版本&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;python --version&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;python -V&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="环境问题" scheme="https://blog.jiangdashuai.com/categories/%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
-    
-    
-      <category term="centos" scheme="https://blog.jiangdashuai.com/tags/centos/"/>
-    
-      <category term="python" scheme="https://blog.jiangdashuai.com/tags/python/"/>
     
   </entry>
   

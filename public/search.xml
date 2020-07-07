@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>go条件与循环</title>
+      <link href="/2020/07/07/go%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/"/>
+      <url>/2020/07/07/go%E6%9D%A1%E4%BB%B6%E4%B8%8E%E5%BE%AA%E7%8E%AF/</url>
+      
+        <content type="html"><![CDATA[<p>主要介绍go语言其他语言区别</p><a id="more"></a><h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p>Go语言仅支持循环关键字for，不需要将三段式括号括起来</p><p><img src="img/2.png" alt="代码示例"></p><h3 id="if条件"><a href="#if条件" class="headerlink" title="if条件"></a>if条件</h3><ol><li>condition表达式结果必须为布尔值</li><li>支持变量赋值</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="keyword">var</span> declaration; condition&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> loop</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"testing"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestIFMultiSec</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line"><span class="keyword">if</span> a := <span class="number">1</span> == <span class="number">1</span>; a &#123;</span><br><span class="line">t.Log(<span class="string">"1=1"</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="switch条件"><a href="#switch条件" class="headerlink" title="switch条件"></a>switch条件</h3><ol><li>条件表达式不限制为常量或者整数</li><li>单个case中，可以出现多个结果选项，使用逗号分隔</li><li>与C语言等规则相反，Go语言不需要用break来明确退出一个case</li><li>可以不设定switch之后的条件表达式，在此种情况下，整个switch结构与多个if…else…的逻辑作用等同</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestSwitchMultiCase</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">count := <span class="number">5</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; count; i++ &#123;</span><br><span class="line"><span class="keyword">switch</span> i &#123;</span><br><span class="line"><span class="keyword">case</span> <span class="number">0</span>, <span class="number">2</span>:</span><br><span class="line">t.Log(<span class="string">"Even"</span>)</span><br><span class="line"><span class="keyword">case</span> <span class="number">1</span>, <span class="number">3</span>:</span><br><span class="line">t.Log(<span class="string">"Odd"</span>)</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">t.Log(<span class="string">"it is not 0-3"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//类似if else</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestSwitchCaseCondition</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">count := <span class="number">5</span></span><br><span class="line"><span class="keyword">for</span> i := <span class="number">0</span>; i &lt; count; i++ &#123;</span><br><span class="line"><span class="keyword">switch</span> &#123;</span><br><span class="line"><span class="keyword">case</span> i%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">t.Log(<span class="string">"Even"</span>)</span><br><span class="line"><span class="keyword">case</span> i%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">t.Log(<span class="string">"Odd"</span>)</span><br><span class="line"><span class="keyword">default</span>:</span><br><span class="line">t.Log(<span class="string">"unknow"</span>)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> go学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go运算符</title>
+      <link href="/2020/07/07/go%E8%BF%90%E7%AE%97%E7%AC%A6/"/>
+      <url>/2020/07/07/go%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+      
+        <content type="html"><![CDATA[<p>主要介绍go语言运算符与其他语言运算符区别</p><a id="more"></a><h2 id="算数运算符"><a href="#算数运算符" class="headerlink" title="算数运算符"></a>算数运算符</h2><p>go语言中没有前置++，–（例如++a）</p><h2 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h2><h3 id="用-比较数组"><a href="#用-比较数组" class="headerlink" title="用==比较数组"></a>用==比较数组</h3><ol><li><p>相同维数且还有相同个数元素的数组才可以比较</p></li><li><p>每个元素都相同才相等</p></li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> type_test</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">"testing"</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestImplicit</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">a := [...]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">b := [...]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">4</span>&#125;</span><br><span class="line"><span class="comment">//c := [...]int&#123;1, 2, 3, 4, 5&#125;</span></span><br><span class="line">d := [...]<span class="keyword">int</span>&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">t.Log(a == b)</span><br><span class="line">t.Log(a == d)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="逻辑运算符（并无特殊区别）"><a href="#逻辑运算符（并无特殊区别）" class="headerlink" title="逻辑运算符（并无特殊区别）"></a>逻辑运算符（并无特殊区别）</h2><h2 id="位运算符"><a href="#位运算符" class="headerlink" title="位运算符"></a>位运算符</h2><p>&amp;^按位置零<br>1 &amp;^ 0 – 1<br>1 &amp;^ 1 – 0<br>0 &amp;^ 1 – 0<br>0 &amp;^ 0 – 0</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> go学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>go数据类型</title>
+      <link href="/2020/07/06/go%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2020/07/06/go%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="与其他主要编程语言的差异"><a href="#与其他主要编程语言的差异" class="headerlink" title="与其他主要编程语言的差异"></a>与其他主要编程语言的差异</h3><p>1.Go语言不允许隐式类型转换<br>2.别名和原有类型也不能进行隐式类型转换</p><a id="more"></a><p>3.不支持指针运算<br>4.string是值类型，其默认的初始值为空字符串，而不是nil</p><h3 id="类型的预定义值"><a href="#类型的预定义值" class="headerlink" title="类型的预定义值"></a>类型的预定义值</h3><p>1.math.MaxInt64<br>2.math.MaxFloat64<br>3.math.MaxUint32</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> go学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> go </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>go常量定义</title>
       <link href="/2020/07/06/go%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/"/>
       <url>/2020/07/06/go%E5%B8%B8%E9%87%8F%E5%AE%9A%E4%B9%89/</url>
@@ -755,9 +830,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
@@ -766,9 +841,9 @@
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
