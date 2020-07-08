@@ -62,6 +62,8 @@ a[1:]=a[1:len(a)] //2,3,4,5
 
 ### 切片
 
+切片的长度与连续存储容量可能不同，可能占用10的容量，长度为3
+
 ![切片](img/切片.png)
 
 ```go
@@ -91,8 +93,10 @@ func TestSliceGrowing(t *testing.T) {
 	s := []int{}
 	for i := 0; i < 10; i++ {
 		s = append(s, i)
-		t.Log(len(s), cap(s))
-		// slice_test.go:26: 1 1
+        t.Log(len(s), cap(s))
+        //当切片append大于cap的时候，cap会成倍的增长
+        // s=append(s,i)因为当存储空间扩展的时候扩展的存储空间地址相对原空间地址有所增加，所以需要重新赋值到s
+    	// slice_test.go:26: 1 1
 		// slice_test.go:26: 2 2
 		// slice_test.go:26: 3 4
 		// slice_test.go:26: 4 4
