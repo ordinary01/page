@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-07T11:19:34.155Z</updated>
+  <updated>2020-07-08T10:00:40.427Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>go常用集合</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/08/go%E5%B8%B8%E7%94%A8%E9%9B%86%E5%90%88/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/08/go常用集合/</id>
+    <published>2020-07-08T06:26:52.000Z</published>
+    <updated>2020-07-08T10:00:40.427Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;数组和切片&quot;&gt;&lt;a href=&quot;#数组和切片&quot; class=&quot;headerlink&quot; title=&quot;数组和切片&quot;&gt;&lt;/a&gt;数组和切片&lt;/h2&gt;&lt;h3 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h3&gt;&lt;h4 id=&quot;数组声明&quot;&gt;&lt;a href=&quot;#数组声明&quot; class=&quot;headerlink&quot; title=&quot;数组声明&quot;&gt;&lt;/a&gt;数组声明&lt;/h4&gt;&lt;figure class=&quot;highlight go&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;var&lt;/span&gt; a [&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;//声明并初始化为默认零值&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;a[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] = &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;b := [&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;&amp;#125; &lt;span class=&quot;comment&quot;&gt;// 声明同时初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;c := [&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;][&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;#123;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;&amp;#125;,&amp;#123;&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;&amp;#125;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//多维数组初始化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;d :=[...]&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt;&amp;#123;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;3&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;,&lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;&amp;#125; &lt;span class=&quot;comment&quot;&gt;//不声明数组有多少元素&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="go学习" scheme="https://blog.jiangdashuai.com/categories/go%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="go" scheme="https://blog.jiangdashuai.com/tags/go/"/>
+    
+  </entry>
   
   <entry>
     <title>go条件与循环</title>
@@ -418,26 +438,6 @@
     <summary type="html">
     
       &lt;p&gt;所有的Java虚拟机实现必须在每个类或接口被Java程序 “&lt;a href=&quot;/2019/03/18/JAVA程序对类的使用方式/&quot;&gt;&lt;strong&gt;&lt;code&gt;首次主动使用&lt;/code&gt;&lt;/strong&gt;&lt;/a&gt;” 时才初始化他们&lt;br&gt;被动使用都不会导致类的初始化&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="JVM学习" scheme="https://blog.jiangdashuai.com/categories/JVM%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jvm符号引用VS间接引用</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/18/%E7%AC%A6%E5%8F%B7%E5%BC%95%E7%94%A8VS%E9%97%B4%E6%8E%A5%E5%BC%95%E7%94%A8/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/18/符号引用VS间接引用/</id>
-    <published>2019-03-18T14:45:55.000Z</published>
-    <updated>2020-07-03T06:43:42.771Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;符号引用&lt;/strong&gt;就是指的字符串，这个字符串中包含足够的信息，用于在实际使用的时候找到相应的类的位置。比如说某个方法的符号引用，如：“java/io/PrintStream.println:(Ljava/lang/String;)V”。里面有类的信息，方法名，方法参数等信息。&lt;br&gt;
     
     </summary>
     
