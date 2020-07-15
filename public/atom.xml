@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-15T10:46:08.603Z</updated>
+  <updated>2020-07-15T10:49:02.649Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -21,19 +21,16 @@
     <link href="https://blog.jiangdashuai.com/2020/07/15/openfalcon%E7%9B%B8%E5%BA%94%E9%A1%B5%E9%9D%A2%E5%8F%96%E6%B6%88%E7%99%BB%E9%99%86%E6%A0%A1%E9%AA%8C%EF%BC%88%E4%B8%8D%E6%AD%A3%E8%A7%84/"/>
     <id>https://blog.jiangdashuai.com/2020/07/15/openfalcon相应页面取消登陆校验（不正规/</id>
     <published>2020-07-15T09:59:19.000Z</published>
-    <updated>2020-07-15T10:46:08.603Z</updated>
+    <updated>2020-07-15T10:49:02.649Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;p&gt;项目需要将openfalcon的chat图表无需登录展示出来&lt;/p&gt;
+      &lt;p&gt;项目需要将openfalcon的chat图表无需登录展示出来&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;使用官方推荐的Grafana视图自行扩展&lt;a href=&quot;https://book.open-falcon.org/zh_0_2/dev/support_grafana.html&quot;
-        
-      
+&lt;li&gt;使用官方推荐的Grafana视图自行扩展&lt;a href=&quot;https://book.open-falcon.org/zh_0_2/dev/support_grafana.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://book.open-falcon.org/zh_0_2/dev/support_grafana.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过API获取数据，自己实现展示&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;通过修改dashboard的权限校验实现&lt;/p&gt;
     
     </summary>
     
