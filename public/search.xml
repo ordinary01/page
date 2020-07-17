@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>docker部署fastDFS</title>
+      <link href="/2020/07/16/docker%E9%83%A8%E7%BD%B2fastDFS/"/>
+      <url>/2020/07/16/docker%E9%83%A8%E7%BD%B2fastDFS/</url>
+      
+        <content type="html"><![CDATA[<p>docker环境部署FastDFS文件系统<br>查找 fastdfs镜像   docker search fastdfs</p><a id="more"></a><ol><li><p>拉取镜像</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull delron/fastdfs</span><br></pre></td></tr></table></figure></li><li><p>启动tracker服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --network=host --name tracker -v /home/tracker:/var/fdfs delron/fastdfs tracker</span><br></pre></td></tr></table></figure></li><li><p>启动storage服务</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --network=host --name storage -e TRACKER_SERVER=你的ip:22122 -v /home/storage:/var/fdfs -e GROUP_NAME=group1 delron/fastdfs storage</span><br></pre></td></tr></table></figure></li><li><p>查看已经启动的容器</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure><p> <img src="img/查看启动docker.png" alt="查看启动docker"></p></li></ol><p>注：<br>fastdfs默认的端口有三个8888,23000,22122），8888是默认的nginx代理端口，23000是storage服务端口，22122是tracker服务端口，运行时需要将这三个端口对外开放</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone=public  --permanent --add-port=23000/tcp</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public  --permanent --add-port=22122/tcp</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public  --permanent --add-port=8888/tcp</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> fastDFS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>openfalcon相应页面取消登陆校验（不正规)</title>
       <link href="/2020/07/15/openfalcon%E7%9B%B8%E5%BA%94%E9%A1%B5%E9%9D%A2%E5%8F%96%E6%B6%88%E7%99%BB%E9%99%86%E6%A0%A1%E9%AA%8C%EF%BC%88%E4%B8%8D%E6%AD%A3%E8%A7%84/"/>
       <url>/2020/07/15/openfalcon%E7%9B%B8%E5%BA%94%E9%A1%B5%E9%9D%A2%E5%8F%96%E6%B6%88%E7%99%BB%E9%99%86%E6%A0%A1%E9%AA%8C%EF%BC%88%E4%B8%8D%E6%AD%A3%E8%A7%84/</url>

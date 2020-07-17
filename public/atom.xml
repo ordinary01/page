@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.jiangdashuai.com/"/>
-  <updated>2020-07-15T10:49:02.649Z</updated>
+  <updated>2020-07-17T06:24:18.852Z</updated>
   <id>https://blog.jiangdashuai.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker部署fastDFS</title>
+    <link href="https://blog.jiangdashuai.com/2020/07/16/docker%E9%83%A8%E7%BD%B2fastDFS/"/>
+    <id>https://blog.jiangdashuai.com/2020/07/16/docker部署fastDFS/</id>
+    <published>2020-07-16T08:36:47.000Z</published>
+    <updated>2020-07-17T06:24:18.852Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;docker环境部署FastDFS文件系统&lt;br&gt;查找 fastdfs镜像   docker search fastdfs&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="https://blog.jiangdashuai.com/tags/docker/"/>
+    
+      <category term="fastDFS" scheme="https://blog.jiangdashuai.com/tags/fastDFS/"/>
+    
+  </entry>
   
   <entry>
     <title>openfalcon相应页面取消登陆校验（不正规)</title>
@@ -280,7 +302,7 @@
     <link href="https://blog.jiangdashuai.com/2020/06/27/docker%E4%BF%AE%E6%94%B9%E9%95%9C%E5%83%8F%E5%90%8D%E7%A7%B0/"/>
     <id>https://blog.jiangdashuai.com/2020/06/27/docker修改镜像名称/</id>
     <published>2020-06-27T11:21:15.000Z</published>
-    <updated>2020-07-03T06:43:42.762Z</updated>
+    <updated>2020-07-16T09:04:56.836Z</updated>
     
     <summary type="html">
     
@@ -423,26 +445,6 @@
 &lt;ul&gt;
 &lt;li&gt;主动使用（类的首次主动使用会导致类的初始化）&lt;/li&gt;
 &lt;/ul&gt;
-    
-    </summary>
-    
-      <category term="JVM学习" scheme="https://blog.jiangdashuai.com/categories/JVM%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="jvm" scheme="https://blog.jiangdashuai.com/tags/jvm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM类的加载</title>
-    <link href="https://blog.jiangdashuai.com/2019/03/18/JVM%E7%B1%BB%E7%9A%84%E5%8A%A0%E8%BD%BD/"/>
-    <id>https://blog.jiangdashuai.com/2019/03/18/JVM类的加载/</id>
-    <published>2019-03-18T15:05:45.000Z</published>
-    <updated>2020-07-03T06:43:42.744Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;类的加载指的是将类的.class文件中的二进制数据读入到内存中，将其放在&lt;strong&gt;运行时数据区的方法区&lt;/strong&gt;内，然后再在内存中创建一个java.lang.Class对象（规范并未说明Class对象位于哪里，HotSpot虚拟机将其放在方法区中）用来封装类在方法区内的数据结构。&lt;br&gt;类不管生成多少个实例，它对应的Class对象只有唯一的一个，这里的Class对象就是唯一的那一个。&lt;br&gt;
     
     </summary>
     
